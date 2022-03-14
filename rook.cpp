@@ -11,7 +11,7 @@ class Rook : public Piece{
         tuple<int,int> destination_coord = destination.convertion();
         if(get<0>(origine_coord)==get<0>(destination_coord)){
             
-            if(abs(origine.position[1]-destination.position[1])>8){
+            if(abs(origine.position[1]-destination.position[1])>7){
                 cout<<"Mouvement illégal"<<endl;
                 return false;
             }
@@ -23,7 +23,7 @@ class Rook : public Piece{
 
         else if(origine.position[1]==destination.position[1]){
 
-            if(abs(get<0>(destination_coord)-get<0>(origine_coord))>8){
+            if(abs(get<0>(destination_coord)-get<0>(origine_coord))>7){
                 cout<<"Mouvement illégal"<<endl;
                 return false;
             }

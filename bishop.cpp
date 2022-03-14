@@ -10,6 +10,7 @@ class Bishop : public Piece{
         tuple<int,int> origine_coord = origine.convertion();
         tuple<int,int> destination_coord = destination.convertion();
         if(abs(get<0>(destination_coord)-get<0>(origine_coord))>7 || abs(destination.position[1]-origine.position[1])>7){
+            cout<<"Mouvement illégal"<<endl;
             return false;
         }
         else if(abs(get<0>(destination_coord)-get<0>(origine_coord))-abs(destination.position[1]-origine.position[1])==0){
