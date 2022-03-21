@@ -7,13 +7,11 @@ using namespace std;
 class Bishop : public Piece{
 
     bool est_mouvement_legal(Square origine, Square destination){
-        tuple<int,int> origine_coord = origine.convertion();
-        tuple<int,int> destination_coord = destination.convertion();
-        if(abs(get<0>(destination_coord)-get<0>(origine_coord))>7 || abs(destination.position[1]-origine.position[1])>7){
+        if(abs(destination.getLigne()-origine.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
             cout<<"Mouvement illégal"<<endl;
             return false;
         }
-        else if(abs(get<0>(destination_coord)-get<0>(origine_coord))-abs(destination.position[1]-origine.position[1])==0){
+        else if(abs(destination.getLigne()-origine.getLigne())-abs(destination.getColonne()-origine.getColonne())==0){
             return true;
 
         }

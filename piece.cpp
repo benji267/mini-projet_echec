@@ -1,30 +1,33 @@
 #include <iostream>
-#include <square.cpp>
+#include "square.cpp"
 #include <stdlib.h>
 using namespace std;
 
 // White=true and Black=false
 
 class Piece{
-    public:
+    private:
     string nom_piece;
     bool couleur;
     Square square;
 
-    Piece::Piece(string nom_piece, bool couleur, Square square){
-        this->nom_piece=nom_piece;
-        if(couleur){
-            this->couleur=couleur;
-        }
-        else{
-            this->couleur=couleur;
-        }
+    Piece(string nom_piece, bool couleur, Square square) : nom_piece(nom_piece), couleur(couleur), square(square)
+    {}
+
+    string getNompiece(){
+        return nom_piece;
     }
-    
+
+    bool getCouleur(){
+        return couleur;
+    }
+    Square getSquare(){
+        return square;
+    }
 
 
     virtual void affiche(Piece &p){
-        cout << "Le nom de la pièce est : " << p.nom_piece <<  endl;
+        cout << "Le nom de la pièce est : " << getNompiece() <<  endl;
     }
 
 };

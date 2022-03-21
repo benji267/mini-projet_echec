@@ -5,24 +5,32 @@ using namespace std;
 
 
 class Square{
-    public:
-    string position;
+    
+    private:
+    int ligne;
+    int colonne;
 
-    tuple<int,int> convertion(){
-        tuple<int,int> coordonnees;
-        string chaine="abcdefgh";
-        for(int i=0;i<7;i++){
-            if(this->position[0]=chaine.at(i)){
-                get<0>(coordonnees)=i;
-                get<1>(coordonnees)=this->position[1]-1;
-                return coordonnees;
-            }
-        }
+    public:
+    
+
+    Square(int ligne, int colonne){
+        this->ligne=ligne;
+        this->colonne=colonne; 
     }
 
+    int getLigne() const{
+        return ligne;
+    }
 
-    void to_string_afficher(int ligne, int colonne){
+    int getColonne() const{
+        return colonne;
+    }
+    
+
+    void to_string_afficher(Square square){
         string chaine="abcdefgh";
-        cout << "ligne : "<<chaine.at(ligne) << "colonne : "<<colonne-1 << endl;
+        cout << "ligne : "<<chaine.at(getLigne()-1) << "colonne : "<<chaine.at(getColonne() - 1) << endl;
     }
 };
+
+
