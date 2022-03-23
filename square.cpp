@@ -32,5 +32,3 @@ class Square{
         cout << "ligne : "<<chaine.at(getLigne()-1) << "colonne : "<<chaine.at(getColonne() - 1) << endl;
     }
 };
-
-

@@ -13,28 +13,28 @@ using namespace std;
 
 class Echiquier{
 // constructeur
-    Echiquier::Echiquier () {
+    Echiquier () {
 
     alloc_mem_echiquier(); // --> alloue un tableau équivalent à un Piece *[8][8]
                            //     en initialisant les cases à nullptr 
                            //     et alloue des vecteurs piecesb, piecesn, pionsb
     // Constructeur (Couleur,nom_affiché, case)
-    piecesb[0] = new Tour    (Blanc," \u2656 ",  Square(0,0));
-    piecesb[1] = new Cavalier(Blanc," \u2658 ",  Square(0,1));
-    piecesb[2] = new Fou     (Blanc," \u2657 ",  Square(0,2));
-    piecesb[3] = new Dame    (Blanc," \u2655 ",  Square(0,3));
-    piecesb[4] = new Roi     (Blanc," \u2654 ",  Square(0,4));
-    piecesb[5] = new Fou     (Blanc," \u2657 ",  Square(0,5));
-    piecesb[6] = new Cavalier(Blanc," \u2658 ",  Square(0,6));
-    piecesb[7] = new Tour    (Blanc," \u2656 ",  Square(0,7));
-    piecesn[0] = new Tour    (Noir, " \u265C ",  Square(7,0));
-    piecesn[1] = new Cavalier(Noir, " \u265E ",  Square(7,1));
-    piecesn[2] = new Fou     (Noir, " \u265D ",  Square(7,2));
-    piecesn[3] = new Dame    (Noir, " \u265B ",  Square(7,3));
-    piecesn[4] = new Roi     (Noir, " \u265A ",  Square(7,4));
-    piecesn[5] = new Fou     (Noir, " \u265D ",  Square(7,5));
-    piecesn[6] = new Cavalier(Noir, " \u265E ",  Square(7,6));
-    piecesn[7] = new Tour    (Noir, " \u265C ",  Square(7,7));
+    piecesb[0] = new Rook    (Blanc," \u2656 ",  Square(0,0));
+    piecesb[1] = new Knight (Blanc," \u2658 ",  Square(0,1));
+    piecesb[2] = new Bishop     (Blanc," \u2657 ",  Square(0,2));
+    piecesb[3] = new Queen    (Blanc," \u2655 ",  Square(0,3));
+    piecesb[4] = new King     (Blanc," \u2654 ",  Square(0,4));
+    piecesb[5] = new Bishop     (Blanc," \u2657 ",  Square(0,5));
+    piecesb[6] = new Knight (Blanc," \u2658 ",  Square(0,6));
+    piecesb[7] = new Rook    (Blanc," \u2656 ",  Square(0,7));
+    piecesn[0] = new Rook    (Noir, " \u265C ",  Square(7,0));
+    piecesn[1] = new Knight (Noir, " \u265E ",  Square(7,1));
+    piecesn[2] = new Bishop     (Noir, " \u265D ",  Square(7,2));
+    piecesn[3] = new Queen    (Noir, " \u265B ",  Square(7,3));
+    piecesn[4] = new King     (Noir, " \u265A ",  Square(7,4));
+    piecesn[5] = new Bishop     (Noir, " \u265D ",  Square(7,5));
+    piecesn[6] = new Knight (Noir, " \u265E ",  Square(7,6));
+    piecesn[7] = new Rook    (Noir, " \u265C ",  Square(7,7));
 
     // allocation des pions
     for (unsigned char i(0);i<NBCOL;i++) {
@@ -57,7 +57,7 @@ class Echiquier{
 };
 
 
-void Echiquier::affiche () const {
+void affiche () const {
 
         string space5 = string(5,' ');
         cout << endl;

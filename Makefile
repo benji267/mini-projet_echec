@@ -1,5 +1,5 @@
-piece: piece.cpp
-	g++ -std=c++11 piece.cpp -o piece 
+king: king.cpp
+	g++ -std=c++11 king.cpp -o king 
 
 clean:
-	rm piece
+	rm king
