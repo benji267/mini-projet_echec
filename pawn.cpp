@@ -5,6 +5,16 @@ using namespace std;
 
 class Pawn : public Piece{
 
+    Pawn(bool couleur, string nom_piece, Square square);
+        ~Pawn();
+
+        Pawn(bool couleur, string nom_piece, Square square){
+            this->nom_piece=nom_piece;
+        }
+
+        Pawn::~Pawn(){
+        }
+
     bool est_mouvement_legal(Square origine, Square destination){
         if(abs(destination.getLigne()-origine.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
             cout<<"Mouvement illégal"<<endl;

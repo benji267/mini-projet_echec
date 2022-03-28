@@ -6,6 +6,17 @@ using namespace std;
 
 class Rook : public Piece{
 
+    public:
+        Rook(bool couleur, string nom_piece, Square square);
+        ~Rook();
+
+        Rook(bool couleur, string nom_piece, Square square){
+            this->nom_piece=nom_piece;
+        }
+
+        Rook::~Rook(){
+        }
+
     bool est_mouvement_legal(Square origine, Square destination){
         if(origine.getLigne()==destination.getLigne()){
             

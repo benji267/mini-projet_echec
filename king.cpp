@@ -6,6 +6,17 @@
 using namespace std;
 
 class King : public Piece{
+
+    King(bool couleur, string nom_piece, Square square);
+        ~King();
+
+        King(bool couleur, string nom_piece, Square square){
+            this->nom_piece=nom_piece;
+        }
+
+        King::~King(){
+        }
+
     bool est_mouvement_legale(Square origine, Square destination){
         if(abs(destination.getLigne()-origine.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
             cout<<"Mouvement illégal"<<endl;

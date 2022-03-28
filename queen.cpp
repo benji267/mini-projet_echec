@@ -4,6 +4,17 @@
 using namespace std;
 
 class Queen : public Piece{
+
+    Queen(bool couleur, string nom_piece, Square square);
+        ~Queen();
+
+        Queen(bool couleur, string nom_piece, Square square){
+            this->nom_piece=nom_piece;
+        }
+
+        Queen::~Queen(){
+        }
+
     bool est_mouvement_legal(Square origine, Square destination){
         if(abs(origine.getLigne()-destination.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
             cout<<"Mouvement illégal"<<endl;

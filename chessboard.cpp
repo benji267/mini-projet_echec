@@ -7,42 +7,57 @@
 #include "pawn.cpp"
 #include "rook.cpp"
 #include "bishop.cpp"
-
-
 using namespace std;
 
+
+
+enum class Color{White, Black};
+
 class Echiquier{
-// constructeur
-    Echiquier () {
+public:
+
+
+  void alloc_mem_echiquier(){
+    Square *tab[8][8];
+    int i;
+    int j;
+    for(i=0; i<8; i++){
+      for(j=0; j<8; j++){
+        tab[i][j]=nullptr;
+      }
+    }
+  }
+
+    Echiquier() {
 
     alloc_mem_echiquier(); // --> alloue un tableau équivalent à un Piece *[8][8]
                            //     en initialisant les cases à nullptr 
                            //     et alloue des vecteurs piecesb, piecesn, pionsb
     // Constructeur (Couleur,nom_affiché, case)
-    piecesb[0] = new Rook    (Blanc," \u2656 ",  Square(0,0));
-    piecesb[1] = new Knight (Blanc," \u2658 ",  Square(0,1));
-    piecesb[2] = new Bishop     (Blanc," \u2657 ",  Square(0,2));
-    piecesb[3] = new Queen    (Blanc," \u2655 ",  Square(0,3));
-    piecesb[4] = new King     (Blanc," \u2654 ",  Square(0,4));
-    piecesb[5] = new Bishop     (Blanc," \u2657 ",  Square(0,5));
-    piecesb[6] = new Knight (Blanc," \u2658 ",  Square(0,6));
-    piecesb[7] = new Rook    (Blanc," \u2656 ",  Square(0,7));
-    piecesn[0] = new Rook    (Noir, " \u265C ",  Square(7,0));
-    piecesn[1] = new Knight (Noir, " \u265E ",  Square(7,1));
-    piecesn[2] = new Bishop     (Noir, " \u265D ",  Square(7,2));
-    piecesn[3] = new Queen    (Noir, " \u265B ",  Square(7,3));
-    piecesn[4] = new King     (Noir, " \u265A ",  Square(7,4));
-    piecesn[5] = new Bishop     (Noir, " \u265D ",  Square(7,5));
-    piecesn[6] = new Knight (Noir, " \u265E ",  Square(7,6));
-    piecesn[7] = new Rook    (Noir, " \u265C ",  Square(7,7));
+    piecesb[0] = new Rook    (Color::White," \u2656 ",  Square(0,0));
+    piecesb[1] = new Knight (Color::White," \u2658 ",  Square(0,1));
+    piecesb[2] = new Bishop     (Color::White," \u2657 ",  Square(0,2));
+    piecesb[3] = new Queen    (Color::White," \u2655 ",  Square(0,3));
+    piecesb[4] = new King     (Color::White," \u2654 ",  Square(0,4));
+    piecesb[5] = new Bishop     (Color::White," \u2657 ",  Square(0,5));
+    piecesb[6] = new Knight (Color::White," \u2658 ",  Square(0,6));
+    piecesb[7] = new Rook    (Color::White," \u2656 ",  Square(0,7));
+    piecesn[0] = new Rook    (Color::Black, " \u265C ",  Square(7,0));
+    piecesn[1] = new Knight (Color::Black, " \u265E ",  Square(7,1));
+    piecesn[2] = new Bishop     (Color::Black, " \u265D ",  Square(7,2));
+    piecesn[3] = new Queen    (Color::Black, " \u265B ",  Square(7,3));
+    piecesn[4] = new King     (Color::Black, " \u265A ",  Square(7,4));
+    piecesn[5] = new Bishop     (Color::Black, " \u265D ",  Square(7,5));
+    piecesn[6] = new Knight (Color::Black, " \u265E ",  Square(7,6));
+    piecesn[7] = new Rook    (Color::Black, " \u265C ",  Square(7,7));
 
     // allocation des pions
     for (unsigned char i(0);i<NBCOL;i++) {
-         pionsb[i] =  new Pion(Blanc, " \u2659 ", Square(1,i));
-         pionsn[i] =  new Pion(Noir,  " \u265F ", Square(6,i));
+         pionsb[i] =  new Pion(White, " \u2659 ", Square(1,i));
+         pionsn[i] =  new Pion(Black,  " \u265F ", Square(6,i));
     }
     // Pose des pieces en position initiale
-    // pose des pieces blanches
+    // pose des pieces Whitehes
     for (unsigned char i(0);i<NBCOL;i++){
         // met à jour le tableau echiquier, à la case donnée par 
         // la position courante de la pièce obtenue avec 
@@ -51,7 +66,7 @@ class Echiquier{
         pose_piece(piecesb[i],piecesb[i]->get_pos());
     }   
 
-        // puis pose des pièces noires, pions blancs, pions noirs
+        // puis pose des pièces Blackes, pions Whites, pions Blacks
         // ....
     }
 };

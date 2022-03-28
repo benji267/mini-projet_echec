@@ -6,13 +6,31 @@ using namespace std;
 // White=true and Black=false
 
 class Piece{
-    private:
-    string nom_piece;
-    bool couleur;
-    Square square;
+    protected:
+        bool couleur;
+        string nom_piece;
+        Square square;
 
-    Piece(string nom_piece, bool couleur, Square square) : nom_piece(nom_piece), couleur(couleur), square(square)
+    public:
+        Piece(){
+            couleur=true;
+            nom_piece='rien';
+            square=Square(0,0);
+        }
+        
+        Piece(string nom_piece, bool couleur, Square square);
+        ~Piece();
+
+    Piece(string nom_piece, bool couleur, Square square) : nom_piece(nom_piece), couleur(couleur)
     {}
+
+    Piece(string nom_piece, bool couleur, Square square){
+        this->couleur=couleur;
+        this->square=square;
+    } 
+
+    Piece::~Piece(){     
+    }
 
     string getNompiece(){
         return nom_piece;
@@ -21,9 +39,7 @@ class Piece{
     bool getCouleur(){
         return couleur;
     }
-    Square getSquare(){
-        return square;
-    }
+   
 
 
     virtual void affiche(Piece &p){
