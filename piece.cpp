@@ -21,7 +21,7 @@ class Piece{
         Piece(string nom_piece, bool couleur, Square square);
         ~Piece();
 
-    Piece(string nom_piece, bool couleur, Square square) : nom_piece(nom_piece), couleur(couleur)
+    Piece(string nom_piece, bool couleur, Square square) : nom_piece(nom_piece), couleur(couleur), square(square)
     {}
 
     Piece(string nom_piece, bool couleur, Square square){
