@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <stdlib.h>
 #include "square.cpp"
 #include "queen.cpp"
@@ -15,10 +16,36 @@ enum class Color{White, Black};
 
 class Echiquier{
 public:
+  Echiquier();
+  ~Echiquier();
 
+private:
+  Square *tab[8][8];
+
+
+Echiquier::Echiquier() {
+  for (unsigned i = 0; i < 8; i++) {
+    for (unsigned j = 0; j < 8; j++) {
+      tab[i][j] = new Square(8,8);
+    }
+  }
+}
+
+Echiquier::~Echiquier() {
+  for (unsigned i = 0; i < 8; i++) {
+    for (unsigned j = 0; j < 8; j++) {
+      delete tab[i][j];
+    }
+  }
+}
 
   void alloc_mem_echiquier(){
+
     Square *tab[8][8];
+    vector <int> piecesb;
+    vector <int> piecesn;
+    vector <int> pionsb;
+    vector <int> pionsn;
     int i;
     int j;
     for(i=0; i<8; i++){
@@ -68,7 +95,7 @@ public:
 
         // puis pose des pièces Blackes, pions Whites, pions Blacks
         // ....
-    }
+    }tab
 };
 
 
