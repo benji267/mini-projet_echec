@@ -7,10 +7,10 @@ using namespace std;
 class Rook : public Piece{
 
     public:
-        Rook(bool couleur, string nom_piece, Square square);
+        Rook(Color couleur, string nom_piece, Square square);
         ~Rook();
 
-        Rook(bool couleur, string nom_piece, Square square){
+        Rook(Color couleur, string nom_piece, Square square){
             this->nom_piece=nom_piece;
         }
 

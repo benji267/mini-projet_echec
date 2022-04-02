@@ -5,10 +5,10 @@ using namespace std;
 
 class Knight : public Piece{
 
-    Knight(bool couleur, string nom_piece, Square square);
+    Knight(Color couleur, string nom_piece, Square square);
         ~Knight();
 
-        Knight(bool couleur, string nom_piece, Square square){
+        Knight(Color couleur, string nom_piece, Square square){
             this->nom_piece=nom_piece;
         }
 

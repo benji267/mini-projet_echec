@@ -6,10 +6,10 @@ using namespace std;
 /* diff de gap=0 */
 class Bishop : public Piece{
 
-    Bishop(bool couleur, string nom_piece, Square square);
+    Bishop(Color couleur, string nom_piece, Square square);
         ~Bishop();
 
-        Bishop(bool couleur, string nom_piece, Square square){
+        Bishop(Color couleur, string nom_piece, Square square){
             this->nom_piece=nom_piece;
         }
 

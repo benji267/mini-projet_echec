@@ -1,5 +1,4 @@
 #include <iostream>
-#include <tuple>
 using namespace std;
 
 class Square
@@ -22,7 +21,7 @@ public:
     {
     }
 
-    Square(int ligne, int colonne)
+    Square::Square(int ligne, int colonne)
     {
         this->ligne = ligne;
         this->colonne = colonne;

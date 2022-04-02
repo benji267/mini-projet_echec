@@ -5,10 +5,10 @@ using namespace std;
 
 class Queen : public Piece{
 
-    Queen(bool couleur, string nom_piece, Square square);
+    Queen(Color couleur, string nom_piece, Square square);
         ~Queen();
 
-        Queen(bool couleur, string nom_piece, Square square){
+        Queen(Color couleur, string nom_piece, Square square){
             this->nom_piece=nom_piece;
         }
 

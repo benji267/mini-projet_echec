@@ -7,10 +7,10 @@ using namespace std;
 
 class King : public Piece{
 
-    King(bool couleur, string nom_piece, Square square);
+    King(Color couleur, string nom_piece, Square square);
         ~King();
 
-        King(bool couleur, string nom_piece, Square square){
+        King(Color couleur, string nom_piece, Square square){
             this->nom_piece=nom_piece;
         }
 

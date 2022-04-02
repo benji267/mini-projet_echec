@@ -11,8 +11,9 @@
 using namespace std;
 
 
+#define NBCOL 8
 
-enum class Color{White, Black};
+
 
 class Echiquier{
 public:
@@ -61,27 +62,27 @@ Echiquier::~Echiquier() {
                            //     en initialisant les cases à nullptr 
                            //     et alloue des vecteurs piecesb, piecesn, pionsb
     // Constructeur (Couleur,nom_affiché, case)
-    Rook piece = new Rook    (Color::White," \u2656 ",  Square(0,0));
-    Knight piece= new Knight (Color::White," \u2658 ",  Square(0,1));
-    Bishop piece = new Bishop     (Color::White," \u2657 ",  Square(0,2));
-    Queen piece = new Queen    (Color::White," \u2655 ",  Square(0,3));
-    King piece = new King     (Color::White," \u2654 ",  Square(0,4));
-    Bishop piece = new Bishop     (Color::White," \u2657 ",  Square(0,5));
-    Knight piece= new Knight (Color::White," \u2658 ",  Square(0,6));
-    Rook piece = new Rook    (Color::White," \u2656 ",  Square(0,7));
-    Rook piece [0] = new Rook    (Color::Black, " \u265C ",  Square(7,0));
-    Knight piece[1] = new Knight (Color::Black, " \u265E ",  Square(7,1));
-    Bishop piece[2] = new Bishop     (Color::Black, " \u265D ",  Square(7,2));
-    Queen piece[3] = new Queen    (Color::Black, " \u265B ",  Square(7,3));
-    King piece[4] = new King     (Color::Black, " \u265A ",  Square(7,4));
-    Bishop piece[5] = new Bishop     (Color::Black, " \u265D ",  Square(7,5));
-    Knight piece[6] = new Knight (Color::Black, " \u265E ",  Square(7,6));
-    Rook piece [7] = new Rook    (Color::Black, " \u265C ",  Square(7,7));
+    Rook *piece = new Rook    (Color::White," \u2656 ",  Square(0,0));
+    Knight *piece= new Knight (Color::White," \u2658 ",  Square(0,1));
+    Bishop *piece = new Bishop     (Color::White," \u2657 ",  Square(0,2));
+    Queen *piece = new Queen    (Color::White," \u2655 ",  Square(0,3));
+    King *piece = new King     (Color::White," \u2654 ",  Square(0,4));
+    Bishop *piece = new Bishop     (Color::White," \u2657 ",  Square(0,5));
+    Knight *piece= new Knight (Color::White," \u2658 ",  Square(0,6));
+    Rook *piece = new Rook    (Color::White," \u2656 ",  Square(0,7));
+    Rook *piece  = new Rook    (Color::Black, " \u265C ",  Square(7,0));
+    Knight *piece = new Knight (Color::Black, " \u265E ",  Square(7,1));
+    Bishop *piece = new Bishop     (Color::Black, " \u265D ",  Square(7,2));
+    Queen *piece = new Queen    (Color::Black, " \u265B ",  Square(7,3));
+    King *piece = new King     (Color::Black, " \u265A ",  Square(7,4));
+    Bishop *piece = new Bishop     (Color::Black, " \u265D ",  Square(7,5));
+    Knight *piece = new Knight (Color::Black, " \u265E ",  Square(7,6));
+    Rook *piece  = new Rook    (Color::Black, " \u265C ",  Square(7,7));
 
     // allocation des pions
     for (unsigned char i(0);i<NBCOL;i++) {
-         pionsb[i] =  new Pion(White, " \u2659 ", Square(1,i));
-         pionsn[i] =  new Pion(Black,  " \u265F ", Square(6,i));
+         Pawn *piece =  new Pawn (Color::White, " \u2659 ", Square(1,i));
+         Pawn *piece =  new Pawn (Color::Black,  " \u265F ", Square(6,i));
     }
     // Pose des pieces en position initiale
     // pose des pieces Whitehes

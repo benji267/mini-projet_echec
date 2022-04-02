@@ -5,10 +5,10 @@ using namespace std;
 
 class Pawn : public Piece{
 
-    Pawn(bool couleur, string nom_piece, Square square);
+    Pawn(Color couleur, string nom_piece, Square square);
         ~Pawn();
 
-        Pawn(bool couleur, string nom_piece, Square square){
+        Pawn(Color couleur, string nom_piece, Square square){
             this->nom_piece=nom_piece;
         }
 
