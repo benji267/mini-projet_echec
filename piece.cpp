@@ -4,13 +4,22 @@
 #include <color.h>
 using namespace std;
 
-// White=true and Black=false
+enum Def_Piece{
+    Unknown=0,
+    Rook,
+    Knight,
+    Bishop,
+    Queen,
+    King,
+    Pawn
+};
 
 class Piece{
     protected:
         Color couleur;
         string nom_piece;
         Square square;
+        Def_Piece dpiece;
 
     public:
         Piece(){
@@ -18,31 +27,35 @@ class Piece{
             square=Square(0,0);
         }
         
-        Piece(string nom_piece, Color couleur, Square square);
+        Piece( Color couleur, string &nom_piece,Square square, Def_Piece p=Unknown);
         ~Piece();
 
-    Piece(string nom_piece, Color couleur, Square square) : nom_piece(nom_piece), couleur(couleur), square(square)
+    
+
+    Piece(string nom_piece, Color couleur, Square square) : couleur(couleur), nom_piece(nom_piece), square(square), d_piece(p)
     {}
+
+     Piece::~Piece(){     
+    }
 
     Piece(string nom_piece, Color couleur, Square square){
         this->couleur=couleur;
         this->square=square;
     } 
 
-    Piece::~Piece(){     
-    }
+   
 
     string getNompiece(){
         return nom_piece;
     }
 
-    Color getCouleur(){
+    Color getColor(){
         return couleur;
     }
    
 
 
-    virtual void affiche(Piece &p){
+    void affiche(Piece &p){
         cout << "Le nom de la pièce est : " << getNompiece() <<  endl;
     }
 
