@@ -16,33 +16,40 @@ using namespace std;
 
 
 
-class Chessboard{
+
 
    Chessboard::Chessboard() {
 
     chessboard= new Piece**[8];
 
-    chessboard[0][0] = new Rook(Color::White, " \u2656 ", Square(0, 0));
-    piecesb[1] = new Knight(Color::White, " \u2658 ", Square(0, 1));
-    piecesb[2] = new Bishop(Color::White, " \u2657 ", Square(0, 2));
-    piecesb[3] = new Queen(Color::White, " \u2655 ", Square(0, 3));
-    piecesb[4] = new Kiœ(Color::White, " \u2654 ", Square(0, 4));
-    piecesb[5] = new Bishop(Color::White, " \u2657 ", Square(0, 5));
-    piecesb[6] = new Knight(Color::White, " \u2658 ", Square(0, 6));
-    piecesb[7] = new Rook(Color::White, " \u2656 ", Square(0, 7));
-    piecesn[0] = new Rook(Color::Black, " \u265C ", Square(7, 0));
-    piecesn[1] = new Knight(Color::Black, " \u265E ", Square(7, 1));
-    piecesn[2] = new Bishop(Color::Black, " \u265D ", Square(7, 2));
-    piecesn[3] = new Queen(Color::Black, " \u265B ", Square(7, 3));
-    piecesn[4] = new Kiœ(Color::Black, " \u265A ", Square(7, 4));
-    piecesn[5] = new Bishop(Color::Black, " \u265D ", Square(7, 5));
-    piecesn[6] = new Knight(Color::Black, " \u265E ", Square(7, 6));
-    piecesn[7] = new Rook(Color::Black, " \u265C ", Square(7, 7));
+    for(int i=0; i<8; i++){
+        chessboard[i]=new Piece*[8];
+        for(int j=0; j<8; j++){
+            chessboard[i][j]=nullptr;
+        }
+    }
+
+    chessboard[0][0] = new Rook(White, " \u2656 ", Square(0, 0));
+    chessboard[0][1] = new Knight(White, " \u2658 ", Square(0, 1));
+    chessboard[0][2] = new Bishop(White, " \u2657 ", Square(0, 2));
+    chessboard[0][3] = new Queen(White, " \u2655 ", Square(0, 3));
+    chessboard[0][4] = new King(White, " \u2654 ", Square(0, 4));
+    chessboard[0][5] = new Bishop(White, " \u2657 ", Square(0, 5));
+    chessboard[0][6] = new Knight(White, " \u2658 ", Square(0, 6));
+    chessboard[0][7] = new Rook(White, " \u2656 ", Square(0, 7));
+    chessboard[7][0] = new Rook(Black, " \u265C ", Square(7, 0));
+    chessboard[7][1] = new Knight(Black, " \u265E ", Square(7, 1));
+    chessboard[7][2] = new Bishop(Black, " \u265D ", Square(7, 2));
+    chessboard[7][3] = new Queen(Black, " \u265B ", Square(7, 3));
+    chessboard[7][4] = new King(Black, " \u265A ", Square(7, 4));
+    chessboard[7][5] = new Bishop(Black, " \u265D ", Square(7, 5));
+    chessboard[7][6] = new Knight(Black, " \u265E ", Square(7, 6));
+    chessboard[7][7] = new Rook(Black, " \u265C ", Square(7, 7));
 
     // allocation des pions
     for (unsigned char i(0); i < NBCOL; i++) {
-        pionsb[i] = new Pawn(Color::White, " \u2659 ", Square(1, i));
-        pionsn[i] = new Pawn(Color::Black, " \u265F ", Square(6, i));
+        pionsb[i] = new Pawn(White, " \u2659 ", Square(1, i));
+        pionsn[i] = new Pawn(Black, " \u265F ", Square(6, i));
     }
     // Pose des pieces en position initiale
     // pose des pieces blanches

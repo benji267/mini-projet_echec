@@ -17,9 +17,6 @@ public:
     Square(int ligne, int colonne);
     ~Square();
 
-    Square(int ligne, int colonne) : ligne(ligne), colonne(colonne)
-    {
-    }
 
     Square(const string &position){
         char c=position[0];
@@ -87,12 +84,8 @@ public:
         }
     }
 
-    Square::Square(int ligne, int colonne)
-    {
-        this->ligne = ligne;
-        this->colonne = colonne;
-    }
-    
+    Square::Square(const int ligne, const int colonne) : ligne(ligne), colonne(colonne)
+    {}
 
     Square::~Square()
     {
