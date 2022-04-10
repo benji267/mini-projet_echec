@@ -89,112 +89,48 @@ bool Chessboard::is_empty_bloc(Square location) const{
     }
 }
 
-string Chessboard::pgn_piece(string const name, bool pawn, bool color) const{
+string Chessboard::pgn_piece(string const name) const{
     string pgn_piece;
         if(name=="\u2656 "){
-            pgn_piece="R";
+            pgn_piece="wR";
         }
         else if(name=="\u2658 "){
-            pgn_piece="C";
+            pgn_piece="wC";
         }
         else if(name=="\u2657 "){
-            pgn_piece="B";
+            pgn_piece="wB";
         }
         else if(name=="\u2655 "){
-            pgn_piece="Q";
+            pgn_piece="wQ";
         }
         else if(name=="\u2654 "){
-            pgn_piece="K";
+            pgn_piece="wK";
         }
         else if(name=="u2659"){
-            
+            pgn_piece="wP";
         }
         else if(name=="\u265C "){
-            pgn_piece="R";
+            pgn_piece="bR";
         }
         else if(name=="\u265E "){
-            pgn_piece="C";
+            pgn_piece="bC";
         }
         else if(name=="\u265D "){
-            pgn_piece="B";
+            pgn_piece="bB";
         }
         else if(name=="\u265B "){
-            pgn_piece="Q";
+            pgn_piece="bQ";
         }
         else if(name=="\u265A "){
-            pgn_piece="K";
+            pgn_piece="bK";
         }
-        else if(pawn){
-            if(color){
-                pgn_piece="P";
-            }
-            else{
-                pgn_piece="p";
-            }
+        else if(name=="\u265F"){
+            pgn_piece="bP";
         }
-        else{
-            pgn_piece="";
-        }
-        }
-        else if(name==" \u2658 "){
-            return " \u2658 ";
-        }
-        else if(name==" \u2657 "){
-            return " \u2657 ";
-        }
-        else if(name==" \u2655 "){
-            return " \u2655 ";
-        }
-        else if(name==" \u2654 "){
-            return " \u2654 ";
-        }
-        else if(name==" \u265C "){
-            return " \u265C ";
-        }
-        else if(name==" \u265E "){
-            return " \u265E ";
-        }
-        else if(name==" \u265D "){
-            return " \u265D ";
-        }
-        else if(name==" \u265B "){
-            return " \u265B ";
-        }
-        else if(name==" \u265A "){
-            return " \u265A ";
-        }
-        else{
-            if(name==" \u265C "){
-                return " \u265C ";
-            }
-            else if(name==" \u265E "){
-                return " \u265E ";
-            }
-            else if(name==" \u265D "){
-                return " \u265D ";
-            }
-            else if(name==" \u265B "){
-                return " \u265B ";
-            }
-            else if(name==" \u265A "){
-                return " \u265A ";
-            }
-            else if(name==" \u2656 "){
-                return " \u2656 ";
-            }
-            else if(name==" \u2658 "){
-                return " \u2658 ";
-            }
-            else if(name==" \u2657 "){
-                return " \u2657 ";
-            }
-            else if(name==" \u2655 "){
-                return " \u2655 ";
-            }
-            else if(name==" \u2654 "){
-                return " \u2654 ";
-            }
+    return pgn_piece;
 }
+
+
 
 string Chessboard::final_position() const{
     string final_positionn;
@@ -212,35 +148,24 @@ string Chessboard::final_position() const{
 }
 
 
-void Chessboard::affiche() {
-
-    string space5 = string(5, ' ');
+void Chessboard::show() const{
+    string space5 = string(5,' ');
     cout << endl;
-    cout << "     a     b     c     d     e     f     "
-            "g    "
-            " h    "
-         << endl;
-    cout << "  "
-            "+-----+-----+-----+-----+-----+-----+-----"
-            "+---"
-            "--+"
-         << endl;
-    for (int i(NBCOL - 1); i >= 0; i--) {
-        cout << i + 1 << " "; // numérotation ligne dans affichage
-        for (int j(0); j < NBCOL; j++) {
-            cout << "|";
-            if (chessboard[i][j]) {
-                cout << "\u0020"; // U+0020 est un esapce
-                                  // utf-8 taille police
-                chessboard[i][j]->affiche();
-                cout << "\u0020";
-            } else
-                cout << space5; // 2 ascii spaces
+    cout << "     a     b     c     d     e     f     g     h    "<< endl;
+    cout << "  +-----+-----+-----+-----+-----+-----+-----+-----+" << endl;
+    for (int i(8-1);i>=0;i--) {
+        cout << i+1 << " "; /* numérotation ligne dans affichage */
+        for (int j(0);j<8;j++) {
+            cout << "|" ;
+            if (chessboard[i][j]) {                           	
+				cout << "\u0020\u0020";  /* U+0020 est un esapce utf-8 taille police */
+        	  	chessboard[i][j]-> show();
+              	cout << "\u0020" << " ";
+            }
+            else 
+                cout << space5;  /* 2 ascii spaces */
         }
-        cout << "|\n  "
-                "+-----+-----+-----+-----+-----+-----+-"
-                "----"
-                "+-----+";
+        cout << "|\n  +-----+-----+-----+-----+-----+-----+-----+-----+";
         cout << endl;
     }
 }

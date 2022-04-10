@@ -60,8 +60,8 @@ class Piece{
    
 
 
-    void affiche(Piece &p){
-        cerr << "Le nom de la pièce est : " << getNompiece() <<  endl;
+    void show(){
+        cout << "Le nom de la pièce est : " << nom_piece <<  endl;
     }
 
 };
