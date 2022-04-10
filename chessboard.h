@@ -1,6 +1,12 @@
-#include "square.cpp"
 #include "piece.cpp"
-
+#include <stdlib.h>
+#include "square.cpp"
+#include "queen.cpp"
+#include "king.cpp"
+#include "knight.cpp"
+#include "pawn.cpp"
+#include "rook.cpp"
+#include "bishop.cpp"
 #include <string>
 #include <vector>
 #include <iostream>
@@ -65,28 +71,29 @@ class Chessboard {
          * @param square la case à examiner
          * @return true si la case est vide, false sinon.
          **/
-        bool est_case_vide(Square square) const;
+        bool is_empty_bloc(Square square) const;
 
         /**
          * @brief la position finale du jeu sous une forme 
          *        canonique, on récupère le contenu de chaque
-         *        case en parcoutant l'échiquier dans l'ordre.
+         *        case en parcoutant l'échiquier dans l'ordre et
+         *        on ajoute un espace vide si nullptr.
          * @return une chaine de caractères modélisant l'échiquier
          **/
-        string canonical_position() const;
+        string final_position() const;
 
         /**
-         * @brief est utilisée par canonical_position()
+         * @brief est utilisée par final_position()
          * pour renvoyer le symbole utilisé dans la notation pgn.
          * @param name nom de la pièce
-         * @param view_pawn option d'affichage des pions
-         * @param view_color option d'affichage de la couleur devant
+         * @param pawn option d'affichage des pions
+         * @param color option d'affichage de la couleur devant
          * la valeur de la pièce
          * @return le nom au format pgn: rien si la case est vide,
          *         sinon `w` ou `b` pour la couleur, suivi d'un caractère
          *         pour la pièce (R,N,B,Q,K,P). 
          **/
-        string pgn_piece_name(string const name, bool view_pawn, bool view_color) const;
+        string pgn_piece(string const name, bool pawn, bool color) const;
 
         /**
          *  @brief affiche l'échiquier dans le terminal
