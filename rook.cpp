@@ -13,7 +13,7 @@ class Rook : public Piece{
         if(origine.getLigne()==destination.getLigne()){
             
             if(abs(origine.getColonne()-destination.getColonne())>7){
-                cout<<"Mouvement illégal"<<endl;
+                cerr<<"Mouvement illégal"<<endl;
                 return false;
             }
 
@@ -25,7 +25,7 @@ class Rook : public Piece{
         else if(origine.getColonne()==destination.getColonne()){
 
             if(abs(destination.getLigne()-origine.getLigne())>7){
-                cout<<"Mouvement illégal"<<endl;
+                cerr<<"Mouvement illégal"<<endl;
                 return false;
             }
 

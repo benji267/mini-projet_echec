@@ -61,7 +61,7 @@ class Piece{
 
 
     void affiche(Piece &p){
-        cout << "Le nom de la pièce est : " << getNompiece() <<  endl;
+        cerr << "Le nom de la pièce est : " << getNompiece() <<  endl;
     }
 
 };

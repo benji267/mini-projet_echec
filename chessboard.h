@@ -40,12 +40,12 @@ class Chessboard {
          * @return l'addresse de la pièce se trouvant sur 
          * cette case, nullptr s'il n'y a pas de pièces
          **/
-        Piece * get_piece(Square square) const;
+        Piece * get_piece(Square location) const;
 
         /**
          * @brief place un pointeur nul sur la case origine
          **/
-        void menage(Square origine);
+        void remove_piece(Square location);
 
         /**
          * @brief pose une pièce à la case spécifiée

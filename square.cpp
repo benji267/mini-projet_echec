@@ -47,7 +47,7 @@ public:
                 colonne=7;
                 break;
             default:
-                cout << "erreur de saisie colonne"<<endl;
+                cerr << "erreur de saisie colonne"<<endl;
                 break;
         switch(l){
             case '1':
@@ -75,7 +75,7 @@ public:
                 ligne=7;
                 break;
             default:
-                cout << "erreur de saisi ligne"<<endl;
+                cerr << "erreur de saisi ligne"<<endl;
                 break;
             
         } 
@@ -83,11 +83,12 @@ public:
 
         }
     }
+    
 
-    Square::Square(const int ligne, const int colonne) : ligne(ligne), colonne(colonne)
+    Square(const int ligne, const int colonne) : ligne(ligne), colonne(colonne)
     {}
 
-    Square::~Square()
+    ~Square()
     {
         delete &ligne;
         delete &colonne;
@@ -113,6 +114,6 @@ public:
     void to_string_afficher(Square square)
     {
         string chaine = "abcdefgh";
-        cout << "ligne : " << chaine.at(getLigne() - 1) << "colonne : " << chaine.at(getColonne() - 1) << endl;
+        cerr << "ligne : " << chaine.at(getLigne() - 1) << "colonne : " << chaine.at(getColonne() - 1) << endl;
     }
 };

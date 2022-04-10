@@ -118,6 +118,4 @@ class Game {
          **/
         bool roque(int mvt);
 
-
-    
 };

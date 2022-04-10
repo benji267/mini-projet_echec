@@ -19,7 +19,7 @@ class King : public Piece{
 
     bool est_mouvement_legale(Square origine, Square destination){
         if(abs(destination.getLigne()-origine.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
-            cout<<"Mouvement illégal"<<endl;
+            cerr<<"Mouvement illégal"<<endl;
             return false;
         }
         if(destination.getLigne()==origine.getLigne()){
@@ -28,7 +28,7 @@ class King : public Piece{
             }
             
             else{
-                cout<<"Mouvement illégal"<<endl;
+                cerr<<"Mouvement illégal"<<endl;
                 return false;
             }
         }
@@ -38,14 +38,14 @@ class King : public Piece{
             }
             
             else{
-                cout<<"Mouvement illégal"<<endl;
+                cerr<<"Mouvement illégal"<<endl;
                 return false;
             }
         }
         if(abs(origine.getColonne()-destination.getColonne())==1 && abs(origine.getLigne()-destination.getLigne())==1){
             return true;
         }
-        cout<<"Mouvement illégal"<<endl;
+        cerr<<"Mouvement illégal"<<endl;
         return false;
     }
 

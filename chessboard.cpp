@@ -46,24 +46,31 @@ using namespace std;
     chessboard[7][6] = new Knight(Black, " \u265E ", Square(7, 6));
     chessboard[7][7] = new Rook(Black, " \u265C ", Square(7, 7));
 
-    // allocation des pions
-    for (unsigned char i(0); i < NBCOL; i++) {
-        pionsb[i] = new Pawn(White, " \u2659 ", Square(1, i));
-        pionsn[i] = new Pawn(Black, " \u265F ", Square(6, i));
-    }
-    // Pose des pieces en position initiale
-    // pose des pieces blanches
-    for (unsigned char i(0); i < NBCOL; i++) {
-        // met à jour le tableau Chessboard, à la case
-        // donnée par la position courante de la pièce
-        // obtenue avec piecesb[i]->get_pos(), avec le
-        // pointeur vers la pièce (piecesb[i])
-        pose_piece(piecesb[i], piecesb[i]->get_pos());
-        pose_piece(piecesn[i], piecesn[i]->get_pos());
-        pose_piece(pionsn[i], pionsn[i]->get_pos());
-        pose_piece(pionsb[i], pionsb[i]->get_pos());
+    for(int i=0; i<8; i++){
+        chessboard[1][i] = new Pawn(White, " \u2659 ", Square(1, i));
+        chessboard[6][i] = new Pawn(Black, " \u265F ", Square(6, i));
+}
+
+
+Chessboard::~Chessboard(){}
+
+void Chessboard::remove_piece(Square location){
+    chessboard[location.getLigne()][location.getColonne()]=nullptr;
     }
 }
+
+Piece* Chessboard::get_piece(Square location) const{
+    if(location.getLigne()<0 && location.getLigne()>7 && location.getColonne()<0 && location.getColonne()>7){
+        return chessboard[location.getLigne()][location.getColonne()];;
+    }
+    return nullptr;
+}
+
+
+
+
+
+
 
 void Chessboard::affiche() {
 
@@ -97,3 +104,5 @@ void Chessboard::affiche() {
         cout << endl;
     }
 }
+
+

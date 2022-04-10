@@ -17,7 +17,7 @@ class Pawn : public Piece{
 
     bool est_mouvement_legal(Square origine, Square destination){
         if(abs(destination.getLigne()-origine.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
-            cout<<"Mouvement illégal"<<endl;
+            cerr<<"Mouvement illégal"<<endl;
             return false;
         }
         if(origine.getLigne()==destination.getLigne())
@@ -26,7 +26,7 @@ class Pawn : public Piece{
             }
 
             else{
-                cout<<"Mouvement illégal"<<endl;
+                cerr<<"Mouvement illégal"<<endl;
                 return false;
             }
             
@@ -37,13 +37,13 @@ class Pawn : public Piece{
             }
 
             else{
-                cout<<"Mouvement illégal"<<endl;
+                cerr<<"Mouvement illégal"<<endl;
                 return false;
             }
         }
 
         else{
-            cout<<"Mouvement illégal"<<endl;
+            cerr<<"Mouvement illégal"<<endl;
             return false;
         }
 

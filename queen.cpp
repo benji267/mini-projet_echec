@@ -17,13 +17,13 @@ class Queen : public Piece{
 
     bool est_mouvement_legal(Square origine, Square destination){
         if(abs(origine.getLigne()-destination.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
-            cout<<"Mouvement illégal"<<endl;
+            cerr<<"Mouvement illégal"<<endl;
             return false;
         }
         if(origine.getLigne()==destination.getLigne()){
             
             if(abs(origine.getColonne()-destination.getColonne())>7){
-                cout<<"Mouvement illégal"<<endl;
+                cerr<<"Mouvement illégal"<<endl;
                 return false;
             }
 
@@ -35,7 +35,7 @@ class Queen : public Piece{
         else if(origine.getColonne()==destination.getColonne()){
 
             if(abs(destination.getLigne()-origine.getLigne())>7){
-                cout<<"Mouvement illégal"<<endl;
+                cerr<<"Mouvement illégal"<<endl;
                 return false;
             }
 
@@ -47,7 +47,7 @@ class Queen : public Piece{
             return true;
         }
 
-    cout<<"Mouvement illégal"<<endl;
+    cerr<<"Mouvement illégal"<<endl;
     return false;
     
     }
