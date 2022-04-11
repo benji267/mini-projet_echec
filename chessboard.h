@@ -1,6 +1,6 @@
 #include "piece.cpp"
 #include <stdlib.h>
-#include "square.cpp"
+#include "square.h"
 #include "queen.cpp"
 #include "king.cpp"
 #include "knight.cpp"

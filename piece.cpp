@@ -21,47 +21,47 @@ enum Color{
 
 class Piece{
     protected:
-        Color couleur;
-        string nom_piece;
+        Color color;
+        string piece_name;
         Square square;
         Def_Piece dpiece;
 
     public:
         Piece(){
-            nom_piece='rien';
+            piece_name='rien';
             square=Square(0,0);
         }
         
-        Piece( Color couleur, string &nom_piece,Square square, Def_Piece p);
+        Piece( Color color, string &piece_name,Square square, Def_Piece p);
         ~Piece();
 
     
 
-    Piece(string nom_piece, Color couleur, Square square) : couleur(couleur), nom_piece(nom_piece), square(square)
+    Piece(string piece_name, Color color, Square square) : color(color), piece_name(piece_name), square(square)
     {}
 
      Piece::~Piece(){     
     }
 
-    Piece(string nom_piece, Color couleur, Square square){
-        this->couleur=couleur;
+    Piece(string piece_name, Color color, Square square){
+        this->color=color;
         this->square=square;
     } 
 
    
 
     string getNompiece(){
-        return nom_piece;
+        return piece_name;
     }
 
     Color getColor() const{
-        return couleur;
+        return color;
     }
    
 
 
     void show(){
-        cout << "Le nom de la pièce est : " << nom_piece <<  endl;
+        cout << "Le nom de la pièce est : " << piece_name <<  endl;
     }
 
 };

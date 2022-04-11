@@ -7,7 +7,7 @@ using namespace std;
 class Rook : public Piece{
 
     public:
-        Rook::Rook(Color couleur, string &nom_piece, Square square) : Piece(couleur,nom_piece,square,rook){}
+        Rook::Rook(Color couleur, string &nom_piece, Square square) : Piece(couleur, nom_piece, square){}
        
     bool est_mouvement_legal(Square origine, Square destination){
         if(origine.getLigne()==destination.getLigne()){

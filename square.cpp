@@ -1,24 +1,15 @@
-#include <iostream>
+#include "square.h"
 using namespace std;
 
-class Square
-{
-
-private:
-    int ligne;
-    int colonne;
-
-public:
-    Square()
-    {
-        ligne = -1;
-        colonne = -1;
-    };
-    Square(int ligne, int colonne);
-    ~Square();
 
 
-    Square(const string &position){
+
+    Square::Square(const int lig, const int col)
+    : ligne(lig),colonne(col)
+    {}
+
+
+    Square::Square(const string &position){
         char c=position[0];
         char l=position[1];
         switch(c){
@@ -47,7 +38,7 @@ public:
                 colonne=7;
                 break;
             default:
-                cerr << "erreur de saisie colonne"<<endl;
+                cout << "erreur de saisie colonne"<<endl;
                 break;
         switch(l){
             case '1':
@@ -75,7 +66,7 @@ public:
                 ligne=7;
                 break;
             default:
-                cerr << "erreur de saisi ligne"<<endl;
+                cout << "erreur de saisi ligne"<<endl;
                 break;
             
         } 
@@ -83,37 +74,21 @@ public:
 
         }
     }
-    
 
-    Square(const int ligne, const int colonne) : ligne(ligne), colonne(colonne)
-    {}
-
-    ~Square()
-    {
-        delete &ligne;
-        delete &colonne;
-    }
-
-    Square(const Square &square){
-        ligne=square.ligne;
-        colonne=square.colonne;
-    }
-
-    int getLigne() const
+    int Square::getLigne() const
     {
         return ligne;
     }
 
-    int getColonne() const
+    int Square::getColonne() const
     {
         return colonne;
     }
 
     
 
-    void to_string_afficher(Square square)
+    void Square::to_string_afficher(Square square) const
     {
         string chaine = "abcdefgh";
-        cerr << "ligne : " << chaine.at(getLigne() - 1) << "colonne : " << chaine.at(getColonne() - 1) << endl;
+        cout << "ligne : " << chaine.at(getLigne() - 1) << "colonne : " << chaine.at(getColonne() - 1) << endl;
     }
-};
