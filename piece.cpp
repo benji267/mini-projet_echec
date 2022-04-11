@@ -1,43 +1,9 @@
-#include <iostream>
-#include "square.cpp"
-#include <stdlib.h>
-using namespace std;
+#include "piece.h"
 
-enum Def_Piece{
-    Unknown=0,
-    rook,
-    knight,
-    bishop,
-    queen,
-    king,
-    pawn
-};
 
-enum Color{
-    Unknown=0,
-    White,
-    Black
-};
 
-class Piece{
-    protected:
-        Color color;
-        string piece_name;
-        Square square;
-        Def_Piece dpiece;
-
-    public:
-        Piece(){
-            piece_name='rien';
-            square=Square(0,0);
-        }
-        
-        Piece( Color color, string &piece_name,Square square, Def_Piece p);
-        ~Piece();
-
-    
-
-    Piece(string piece_name, Color color, Square square) : color(color), piece_name(piece_name), square(square)
+    Piece::Piece() : color(Unknown), piece_name(""), square(1,1){}
+    Piece(Color color, Square square) : color(color), piece_name(piece_name), square(square)
     {}
 
      Piece::~Piece(){     
@@ -50,17 +16,28 @@ class Piece{
 
    
 
-    string getNompiece(){
-        return piece_name;
-    }
 
-    Color getColor() const{
+    Piece::Color get_Color() const{
         return color;
     }
-   
+    
+    Piece::string get_Name_Piece() const{
+        return piece_name;
+    }    
 
+    Piece::Square get_location() const{
+        return square;
+    }
 
-    void show(){
+    Piece::Def_Piece get_def() const{
+        return dpiece;
+    }
+
+    Piece::bool get_moovement() const{
+        return has_moove;
+    }
+
+    Piece::void show() const{
         cout << "Le nom de la pièce est : " << piece_name <<  endl;
     }
 
