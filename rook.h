@@ -23,5 +23,5 @@ class Rook : public Piece{
      * une tour.
      * @return true si le mouvement est légal et false sinon
      */
-    bool est_
+    bool est_mo
 };
