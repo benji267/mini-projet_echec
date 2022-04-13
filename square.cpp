@@ -125,5 +125,6 @@
                 cout << "erreur de saisie colonne"<<endl;
                 break;
         }
-        string coord=col + std::square_to_string(lig)
+        string coord=col + std::square_to_string(lig);
+        return coord;
     }
