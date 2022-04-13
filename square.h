@@ -57,4 +57,11 @@ class Square{
      * @param square la case en question 
     **/
     void to_string_afficher(Square square) const;
+
+    /**
+     * @brief remplace le nom de la case sous la forme d'une 
+     * chaine de caractère
+     * 
+     */
+    string square_to_string() const;
 };

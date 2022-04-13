@@ -1,5 +1,4 @@
 #include "square.h"
-using namespace std;
 
 
 
@@ -91,4 +90,40 @@ using namespace std;
     {
         string chaine = "abcdefgh";
         cout << "ligne : " << chaine.at(getLigne() - 1) << "colonne : " << chaine.at(getColonne() - 1) << endl;
+    }
+
+    string Square::square_to_string() const{
+        int lig=ligne+1;
+        string col;
+        switch (colonne){
+            case 0:
+                col='a'; 
+                break;
+            case 1:
+                col='b';
+                break;
+            case 2:
+                col='c';
+                break;
+            case 3:
+                col='d';
+                break;
+            case 4:
+                col='e';
+                break;
+            case 5:
+                col='f';
+                break;
+            case 6:
+                col='g';
+                break;
+            case 7:
+                col='h';
+                break;
+            default:
+                col='z';
+                cout << "erreur de saisie colonne"<<endl;
+                break;
+        }
+        string coord=col + std::square_to_string(lig)
     }
