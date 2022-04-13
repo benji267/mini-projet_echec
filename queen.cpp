@@ -1,29 +1,18 @@
-#include <iostream>
-#include "piece.cpp"
+#include "queen.h"
 #include <stdlib.h>
 using namespace std;
 
-class Queen : public Piece{
+Queen::Queen(Color color, const string &name, Square location) : Piece(color, name, location, queen){}
 
-    Queen(Color couleur, string nom_piece, Square square);
-        ~Queen();
-
-        Queen(Color couleur, string nom_piece, Square square){
-            this->nom_piece=nom_piece;
-        }
-
-        Queen::~Queen(){
-        }
-
-    bool est_mouvement_legal(Square origine, Square destination){
+bool Queen::is_moovement_legal(Square origine, Square destination){
         if(abs(origine.getLigne()-destination.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
-            cerr<<"Mouvement illégal"<<endl;
+            cout<<"Mouvement illégal"<<endl;
             return false;
         }
         if(origine.getLigne()==destination.getLigne()){
             
             if(abs(origine.getColonne()-destination.getColonne())>7){
-                cerr<<"Mouvement illégal"<<endl;
+                cout<<"Mouvement illégal"<<endl;
                 return false;
             }
 
@@ -35,7 +24,7 @@ class Queen : public Piece{
         else if(origine.getColonne()==destination.getColonne()){
 
             if(abs(destination.getLigne()-origine.getLigne())>7){
-                cerr<<"Mouvement illégal"<<endl;
+                cout<<"Mouvement illégal"<<endl;
                 return false;
             }
 
@@ -47,8 +36,6 @@ class Queen : public Piece{
             return true;
         }
 
-    cerr<<"Mouvement illégal"<<endl;
+    cout<<"Mouvement illégal"<<endl;
     return false;
-    
-    }
-};
+}

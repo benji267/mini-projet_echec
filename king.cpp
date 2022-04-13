@@ -1,52 +1,41 @@
-#include <iostream>
 #include <stdlib.h>
 
-#include "piece.cpp"
+#include "king.h"
 
-using namespace std;
 
-class King : public Piece{
+King::King(Color color, const string &name, Square location) : Piece(color, name, location, king){}
 
-    King(Color couleur, string nom_piece, Square square);
-        ~King();
 
-        King(Color couleur, string nom_piece, Square square){
-            this->nom_piece=nom_piece;
-        }
+        
 
-        King::~King(){
-        }
-
-    bool est_mouvement_legale(Square origine, Square destination){
-        if(abs(destination.getLigne()-origine.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
-            cerr<<"Mouvement illégal"<<endl;
+    bool is_moovement_legal(Square position, Square destination){
+        if(abs(destination.getLigne()-position.getLigne())>7 || abs(destination.getColonne()-position.getColonne())>7){
+            cout<<"Mouvement illégal"<<endl;
             return false;
         }
-        if(destination.getLigne()==origine.getLigne()){
-            if(abs(origine.getColonne()-destination.getColonne())==1){
+        if(destination.getLigne()==position.getLigne()){
+            if(abs(position.getColonne()-destination.getColonne())==1){
                 return true;
             }
             
             else{
-                cerr<<"Mouvement illégal"<<endl;
+                cout<<"Mouvement illégal"<<endl;
                 return false;
             }
         }
-        if(origine.getColonne()==destination.getColonne()){
-            if(abs(destination.getLigne()-origine.getLigne())==1){
+        if(position.getColonne()==destination.getColonne()){
+            if(abs(destination.getLigne()-position.getLigne())==1){
                 return true;
             }
             
             else{
-                cerr<<"Mouvement illégal"<<endl;
+                cout<<"Mouvement illégal"<<endl;
                 return false;
             }
         }
-        if(abs(origine.getColonne()-destination.getColonne())==1 && abs(origine.getLigne()-destination.getLigne())==1){
+        if(abs(position.getColonne()-destination.getColonne())==1 && abs(position.getLigne()-destination.getLigne())==1){
             return true;
         }
-        cerr<<"Mouvement illégal"<<endl;
+        cout<<"Mouvement illégal"<<endl;
         return false;
     }
-
-};

@@ -4,12 +4,12 @@ using namespace std;
 
 
 
-Rook::Rook(Color couleur, const string &nom_piece, Square square) : Piece(couleur, nom_piece, square, rook){}
+Rook::Rook(Color color, const string &name, Square location) : Piece(color, name, location, rook){}
        
-bool is_moovement_legal(Square origine, Square destination){
-    if(origine.getLigne()==destination.getLigne()){
+bool Rook::is_moovement_legal(Square position, Square destination){
+    if(position.getLigne()==destination.getLigne()){
         
-        if(abs(origine.getColonne()-destination.getColonne())>7){
+        if(abs(position.getColonne()-destination.getColonne())>7){
             cout<<"Mouvement illégal"<<endl;
             return false;
         }
@@ -19,8 +19,8 @@ bool is_moovement_legal(Square origine, Square destination){
         }
     }
 
-    else if(origine.getColonne()==destination.getColonne()){
-        if(abs(destination.getLigne()-origine.getLigne())>7){
+    else if(position.getColonne()==destination.getColonne()){
+        if(abs(destination.getLigne()-position.getLigne())>7){
             cout<<"Mouvement illégal"<<endl;
             return false;
         }

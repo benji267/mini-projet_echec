@@ -1,30 +1,20 @@
-#include <iostream>
-#include "piece.cpp"
+#include "bishop.h"
 #include <stdlib.h>
-using namespace std;
 
-/* diff de gap=0 */
-class Bishop : public Piece{
 
-    Bishop(Color couleur, string nom_piece, Square square);
-        ~Bishop();
+Bishop::Bishop(Color color, const string &name, Square location) : Piece(color, name, location, bishop) {}
+       
 
-        Bishop(Color couleur, string nom_piece, Square square){
-            this->nom_piece=nom_piece;
-        }
 
-        Bishop::~Bishop(){
-        }
 
-    bool est_mouvement_legal(Square origine, Square destination){
-        if(abs(destination.getLigne()-origine.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
+bool Bishop::is_moovement_legal(Square position, Square destination){
+        if(abs(destination.getLigne()-position.getLigne())>7 || abs(destination.getColonne()-position.getColonne())>7){
             cerr<<"Mouvement illégal"<<endl;
             return false;
         }
-        else if(abs(destination.getLigne()-origine.getLigne())-abs(destination.getColonne()-origine.getColonne())==0){
+        else if(abs(destination.getLigne()-position.getLigne())-abs(destination.getColonne()-position.getColonne())==0){
             return true;
 
         }
         return false;
     }   
-};

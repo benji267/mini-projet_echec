@@ -3,29 +3,29 @@
 
 
 /**
- * @file rook.h
- * @brief classe de la tour
+ * @file pawn.h
+ * @brief classe du pion
  * @date 2022-04-13
  * 
  * 
  */
 
-class Rook : public Piece{
+class Pawn : public Piece{
     public:
 
     /**
-     * @brief constructeur d'une Tour
+     * @brief constructeur d'un pion
      * @param color c'est la couleur de la pièce
      * @param name le nom de la pièce
      * @param location c'est la case d'où se trouve la pièce
      * 
      */
-    Rook(Color color, const string &name, Square location);
+    Pawn(Color color, const string &name, Square location);
 
     /**
      * @brief cette fonction permet de voir si le mouvement
      * demandé par l'utilisateur est légale et autorisé pour
-     * une tour.
+     * un pion.
      * @param position la position de départ de la pièce
      * @param destination position souhaité à atteindre pour la pièce
      * @return true si le mouvement est légal et false sinon

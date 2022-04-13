@@ -1,52 +1,40 @@
-#include <iostream>
-#include "piece.cpp"
+#include "pawn.h"
 #include <stdlib.h>
-using namespace std;
 
-class Pawn : public Piece{
 
-    Pawn(Color couleur, string nom_piece, Square square);
-        ~Pawn();
+Pawn::Pawn(Color color, const string &name, Square location) : Piece(color, name, location, pawn){}
 
-        Pawn(Color couleur, string nom_piece, Square square){
-            this->nom_piece=nom_piece;
-        }
 
-        Pawn::~Pawn(){
-        }
-
-    bool est_mouvement_legal(Square origine, Square destination){
-        if(abs(destination.getLigne()-origine.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
-            cerr<<"Mouvement illégal"<<endl;
+bool is_moovement_legal(Square position, Square destination){
+        if(abs(destination.getLigne()-position.getLigne())>7 || abs(destination.getColonne()-position.getColonne())>7){
+            cout<<"Mouvement illégal"<<endl;
             return false;
         }
-        if(origine.getLigne()==destination.getLigne())
-            if(destination.getColonne()-origine.getColonne()<=2){
+        if(position.getLigne()==destination.getLigne())
+            if(destination.getColonne()-position.getColonne()<=2){
                 return true;
             }
 
             else{
-                cerr<<"Mouvement illégal"<<endl;
+                cout<<"Mouvement illégal"<<endl;
                 return false;
             }
             
-        else if(abs(destination.getLigne()-origine.getLigne())==1){
+        else if(abs(destination.getLigne()-position.getLigne())==1){
 
-            if((destination.getColonne()-origine.getColonne())==1){
+            if((destination.getColonne()-position.getColonne())==1){
                 return true;
             }
 
             else{
-                cerr<<"Mouvement illégal"<<endl;
+                cout<<"Mouvement illégal"<<endl;
                 return false;
             }
         }
 
         else{
-            cerr<<"Mouvement illégal"<<endl;
+            cout<<"Mouvement illégal"<<endl;
             return false;
         }
 
     }
-
-};
