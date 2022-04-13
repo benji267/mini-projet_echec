@@ -1,4 +1,6 @@
+#pragma once
 #include "piece.h"
+
 
 /**
  * @file rook.h
@@ -23,5 +25,5 @@ class Rook : public Piece{
      * une tour.
      * @return true si le mouvement est légal et false sinon
      */
-    bool est_mo
+    bool is_moovement_lega(Square origine, Square destination);
 };
