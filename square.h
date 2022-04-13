@@ -12,7 +12,7 @@ using namespace std;
 
 class Square{
 
-    private:
+    protected:
         /**
          * @brief permet de savoir la ligne où se trouve la pièce
          */

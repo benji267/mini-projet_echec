@@ -1,5 +1,4 @@
 #pragma once
-
 #include "square.h"
 #include <iostream>
 #include <string>
@@ -7,12 +6,9 @@
 /**
  * @brief Color est une structe de type enum qui va affecter une valeur
  * à chaque couleurs. Unknown=0; White=1; Black=2;
+ * @return Unknown, Blanc ou Noir
  */
-enum Color{
-    Unknown=0,
-    White,
-    Black
-};
+enum Color{Unknown=0, White, Black};
 
 /**
  * @brief Def_piece est une structure de type enum qui va affecter une valeur
