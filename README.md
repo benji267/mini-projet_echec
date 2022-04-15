@@ -2,8 +2,9 @@
 ## Jeux d'échec en C++
 
 ## Table des Matières
-1. [Description du projet](#description-du-projet)(##am)
-
+1. [Description du projet](#description-du-projet)
+2. [Démarrage](#démarrage)
+3. [Auteur](#auteur)
 
 ### Description du projet
 ***
