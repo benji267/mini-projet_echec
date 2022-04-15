@@ -12,9 +12,9 @@
 
 ### Démarrage
 ***
->**J'explique quand j'aurais finis commment lancer le programme et comment il fonctionne.* 
+>**J'explique quand j'aurais finis commment lancer le programme et comment il fonctionne.** 
 
 ### Auteur
 ***
->Metzger Benjamin
+>**Metzger Benjamin**
 
