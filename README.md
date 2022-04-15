@@ -1,5 +1,4 @@
-# Mini-Projet 2022 de POO
-## Jeux d'échec en C++
+# Mini-Projet 2022 de POO : Jeux d'échec en C++
 
 ## Table des Matières
 1. [Description du projet](#description-du-projet)
