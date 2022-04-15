@@ -86,15 +86,15 @@
 
     
 
-    void Square::to_string_afficher(Square square) const
+    void Square::to_string_afficher() const
     {
         string chaine = "abcdefgh";
         cout << "ligne : " << chaine.at(getLigne() - 1) << "colonne : " << chaine.at(getColonne() - 1) << endl;
     }
 
-    string Square::square_to_string() const{
+    char Square::square_to_string() const{
         int lig=ligne+1;
-        string col;
+        char col;
         switch (colonne){
             case 0:
                 col='a'; 
@@ -123,8 +123,9 @@
             default:
                 col='z';
                 cout << "erreur de saisie colonne"<<endl;
-                break;
+                return col;
         }
-        string coord=col + std::square_to_string(lig);
+        char coord;
+        sprintf(&coord, lig);
         return coord;
     }

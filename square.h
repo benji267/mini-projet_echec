@@ -56,12 +56,12 @@ class Square{
      * @brief fonction qui affiche la position de la pièce
      * @param square la case en question 
     **/
-    void to_string_afficher(Square square) const;
+    void to_string_afficher() const;
 
     /**
      * @brief remplace le nom de la case sous la forme d'une 
      * chaine de caractère
      * 
      */
-    string square_to_string() const;
+    char square_to_string() const;
 };
