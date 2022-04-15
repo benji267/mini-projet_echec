@@ -2,7 +2,7 @@
 ## Jeux d'échec en C++
 
 ## Table des Matières
-1. [Description du projet](#description-du-praojet)
+1. [Description du projet](#description-du-projet)
 
 ### Description du projet
 ***
