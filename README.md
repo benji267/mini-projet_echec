@@ -3,7 +3,8 @@
 ## Table des Matières
 1. [Description du projet](#description-du-projet)
 2. [Démarrage](#démarrage)
-3. [Auteur](#auteur)
+3. [Doxygen](#doxygen)
+4. [Auteur](#auteur)
 
 ### Description du projet
 ***
@@ -12,7 +13,10 @@
 
 ### Démarrage
 ***
->**J'explique quand j'aurais finis commment lancer le programme et comment il fonctionne.** 
+>**Le programe se compile avec la commande Make. L'éxécutable est alors lancés avec "./echecs" .** 
+
+### Doxygen
+***
 
 ### Auteur
 ***
