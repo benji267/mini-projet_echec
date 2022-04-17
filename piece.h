@@ -2,6 +2,8 @@
 #include "square.h"
 #include <iostream>
 #include <string>
+#include <list>
+#include <enum.h>
 
 /**
  * @brief Color est une structe de type enum qui va affecter une valeur

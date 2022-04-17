@@ -1,4 +1,6 @@
-#include "chessboard.cpp"
+#pragma once
+
+#include "chessboard.h"
 
 #include <iostream>
 using namespace std;

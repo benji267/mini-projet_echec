@@ -92,9 +92,9 @@
         cout << "ligne : " << chaine.at(getLigne() - 1) << "colonne : " << chaine.at(getColonne() - 1) << endl;
     }
 
-    char Square::square_to_string() const{
+    string Square::square_to_string() const{
         int lig=ligne+1;
-        char col;
+        string col;
         switch (colonne){
             case 0:
                 col='a'; 
@@ -125,7 +125,6 @@
                 cout << "erreur de saisie colonne"<<endl;
                 return col;
         }
-        char coord;
-        sprintf(&coord, lig);
+        string coord= col+std::to_string(lig);
         return coord;
     }

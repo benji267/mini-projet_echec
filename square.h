@@ -63,5 +63,5 @@ class Square{
      * chaine de caractère
      * 
      */
-    char square_to_string() const;
+    string square_to_string() const;
 };
