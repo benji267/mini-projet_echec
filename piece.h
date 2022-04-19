@@ -121,6 +121,17 @@ class Piece{
          */
         void show() const;
 
+        /**
+         * @brief vérifie si le déplacement est possible
+         * @param position position de départ
+         * @param location position d'arrivée
+         * @param mvmt
+         * @return renvoie True si le déplacement est possible et False sinon
+         * 
+         * 
+         */
+        bool virtual is_moovement_legal(Square position, Square location, int mvmt) cont = 0;
+
 
 };
 

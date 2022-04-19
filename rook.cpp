@@ -6,7 +6,7 @@ using namespace std;
 
 Rook::Rook(Color color, const string &name, Square location) : Piece(color, name, location, rook){}
        
-bool Rook::is_moovement_legal(Square position, Square destination){
+bool Rook::is_moovement_legal(Square position, Square destination, int mvmt){
     if(position.getLigne()==destination.getLigne()){
         
         if(abs(position.getColonne()-destination.getColonne())>7){

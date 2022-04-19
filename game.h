@@ -78,7 +78,7 @@ class Game {
          * @param type_mvt permet de spécifier s'il s'agit d'un roque
          * @return true si le déplacement a eu lieu, false sinon
          **/
-        bool deplace(Square origine, Square destination, int type_mvt);
+        bool moove(Square origine, Square destination, int mvmt);
 
 
         /**
@@ -93,7 +93,7 @@ class Game {
          * @return true 
          * @return false 
          */
-        int verif_pion(Piece * piece,Square origine, Square destination, int type_mvt);
+        int Check_Pawn(Piece * piece,Square position, Square location, int mvmt);
 
         /**
          * @brief vérifie que la pièce ne passe pas au-dessus

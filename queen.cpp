@@ -4,7 +4,7 @@ using namespace std;
 
 Queen::Queen(Color color, const string &name, Square location) : Piece(color, name, location, queen){}
 
-bool Queen::is_moovement_legal(Square origine, Square destination){
+bool Queen::is_moovement_legal(Square origine, Square destination, int mvmt){
         if(abs(origine.getLigne()-destination.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
             cout<<"Mouvement illégal"<<endl;
             return false;

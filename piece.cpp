@@ -33,5 +33,4 @@
     void Piece::show() const{
         cout << "Le nom de la pièce est : " << piece_name <<  endl;
     }
-
 };
