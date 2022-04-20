@@ -132,7 +132,6 @@ class Piece{
          */
         bool virtual is_moovement_legal(Square position, Square location, int mvmt) cont = 0;
 
-
 };
 
 
