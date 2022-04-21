@@ -12,7 +12,7 @@ enum Color{Unknown=0, White, Black};
 
 /**
  * @brief Def_piece est une structure de type enum qui va affecter une valeur
- * à chaque pièce en question. Unknown=0; rook=1; knight=2 ...
+ * à chaque pièce en question. Unk=0; rook=1; knight=2 ...
  */
 enum Def_Piece{
     Unk=0,
@@ -130,7 +130,7 @@ class Piece{
          * 
          * 
          */
-        bool virtual is_moovement_legal(Square position, Square location, int mvmt) cont = 0;
+        bool virtual is_moovement_legal(Square position, Square location, int mvmt) const = 0;
 
 };
 

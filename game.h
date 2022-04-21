@@ -86,8 +86,8 @@ class Game {
          * comme la prise, la prise en passant, 
          * ou encore l'obstruction par une pièce devant le pion
          * @param piece 
-         * @param origine 
-         * @param destination 
+         * @param position 
+         * @param location 
          * @param type_mvt spécifie le type du mouvement, 
          *      permet de dissocier les différents mouvements
          * @return true 
@@ -105,11 +105,11 @@ class Game {
          * 
          * (à désactiver lors du roque)
          * @param piece 
-         * @param origine 
-         * @param destination 
+         * @param position 
+         * @param location 
          * @return true s'il y a un obstacle,false sinon
          */
-        bool obstacle(Piece * piece,Square origine, Square destination);
+        bool hurdle(Piece * piece,Square position, Square location);
 
         /**
          * @brief si un roque est demandé, il faut spécifier 

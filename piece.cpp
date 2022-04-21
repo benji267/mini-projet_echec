@@ -4,7 +4,7 @@
 
     Piece::Piece() : color(Unknown), piece_name(""), square(1,1){}
 
-    Piece(Color color, Square square) : color(color), piece_name(piece_name), square(square)
+    Piece::Piece(Color color, const string &name, Square square, Def_Piece def) : color(color), piece_name(name), square(square), dpiece(def)
     {}
 
     Piece::~Piece(){}
@@ -22,7 +22,7 @@
         return square;
     }
 
-    Def_PiecePiece::get_def() const{
+    Def_Piece Piece::get_def() const{
         return dpiece;
     }
 

@@ -1,16 +1,12 @@
-#include "piece.cpp"
-#include <stdlib.h>
-#include "square.h"
-#include "queen.cpp"
-#include "king.cpp"
-#include "knight.cpp"
-#include "pawn.cpp"
-#include "rook.cpp"
-#include "bishop.cpp"
-#include <string>
-#include <vector>
-#include <iostream>
-using namespace std;
+#pragma once
+#include "piece.h"
+#include "rook.h"
+#include "knight.h"
+#include "bishop.h"
+#include "queen.h"
+#include "king.h"
+#include "pawn.h"
+
 
 /**
  * @brief Cette classe a pour vocation de manipuler l'échiquier.

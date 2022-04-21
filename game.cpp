@@ -45,7 +45,7 @@ void Game::set_roque(bool roque){
 }
 
 int Game::Check_Pawn(Piece *piece, Square position, Square location, int mvmt){
-    if(!(chess.is_empty(location))){
+    if(!(chess.is_empty_bloc(location))){
         if(abs(location.getLigne()- position.getLigne())==
             abs(location.getColonne() - position.getColonne())){
         mvmt=5;
@@ -62,7 +62,7 @@ int Game::Check_Pawn(Piece *piece, Square position, Square location, int mvmt){
 }
 
 bool Game::moove(Square positon, Square location, int mvmt){
-    if(chess.is_empty(position)){
+    if(chess.is_empty_bloc(position)){
         cerr<<"La case est vide"<<endl;
         return false;
     }
@@ -71,11 +71,118 @@ bool Game::moove(Square positon, Square location, int mvmt){
         cerr<<"Cette pièce n'est pas de votre couleur"<<endl;
         return false;
     }
-    if(piece->get_def() == Pawn){
+    if(piece->get_def() == pawn){
         mvmt = Check_Pawn(piece, position, location, mvmt);
     }
     if(!(piece->is_moovement_legal(position, location, mvmt))){
         cerr<<"Mouvement illégal"<<endl;
         return false;
     }
+
+    /* Maintenant on code la possibilité qu'il y ait un obstacle
+    */
+   if((piece->get_def() == rook) && (roque_en_cours)
+        ||
+        (piece->get_def() == queen)
+        ||
+        (piece->get_def() == pawn))
+        {
+            if
+        }
+
 }
+
+bool Game::hurdle(Piece * piece,Square position, Square location){
+    /* Pour commencer je vais calculer des constantes qui me seront utiles dans ce code  */
+
+    int gap_line=abs(location.getLigne() - position.getLigne());
+    int gap_col= abs(location.getColonne() - position.getColonne());
+    int i;
+    
+    /* on commence par coder la détection d'obstacles horizontales donc sur une même ligne */
+
+    if(gap_line=0 && gap_col !=0){
+        /* On commence par les déplacements sur la droite*/
+        if(gap_col > 0){
+            for(i=1; i<gap_col; i++){
+                if(!(chess.is_empty_bloc(Square(position.getLigne(),position.getColonne()+i))) == false){
+                    return true;
+                }
+
+        /* On enchaine avec les déplacements sur la gauche */
+        else{
+            for(i=gap_col; i>1; i--){
+                if(!(chess.is_empty_bloc(Square(position.getLigne(),position.getColonne()+i))) == false){
+                    return true;
+                }
+            }
+        }
+            }
+        }
+    }
+
+    /* Désormais on regarde les déplacements sur une même colonne */
+
+    if(gap_col==0 && gap_line!=0){
+        /* On commence pâr les déplacements ascendants*/
+        if(gap_line > 0){
+            for(i=1; i<gap_line; i++){
+                if(chess.is_empty_bloc(Square(position.getLigne()+i,position.getColonne()))==false){
+                    return true;
+                }
+            }
+        }
+        /* Cette foic ci les déplacements descendants*/ 
+        else{
+            for(i=gap_line; i>1; i--){
+                if(chess.is_empty_bloc(Square(position.getLigne()+i,position.getColonne()))==false){
+                    return true;
+                }
+            }
+        }
+    }
+    /* Il ne reste que les déplacements diagonaux dans les 4 diagonales */
+
+    if(gap_col==gap_line){
+
+        /* vers la diagonale supérieur gauche */
+        if(gap_col < 0 && gap_line > 0){
+            for(i=1; i<gap_line; i++){
+                if(chess.is_empty_bloc(Square(position.getLigne()+i,position.getColonne()-i))==false){
+                    return true;
+                }
+            }
+        }
+
+        /* vers la diagonale inférieur gauche */
+        if(gap_col < 0 && gap_line < 0){
+            for(i=1; i<gap_line; i++){
+                if(chess.is_empty_bloc(Square(position.getLigne()-i,position.getColonne()-i))==false){
+                    return true;
+                }
+            }
+        }
+
+        /* vers la diagonale supérieur droite*/
+        if(gap_col > 0 && gap_line > 0){
+            for(i=1; i<gap_line; i++){
+                if(chess.is_empty_bloc(Square(position.getLigne()+i,position.getColonne()+i))==false){
+                    return true;
+                }
+            }
+        }
+
+        /* vers la diagonale inférieure droite*/
+        if(gap_col > 0 && gap_line < 0){
+            for(i=1; i<gap_line; i++){
+                if(chess.is_empty_bloc(Square(position.getLigne()-i,position.getColonne()+i))==false){
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
+}
+
+
