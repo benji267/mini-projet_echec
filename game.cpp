@@ -210,6 +210,11 @@ bool Game::hurdle(Piece * piece,Square position, Square location){
     return false;
 }
 
-bool Game::roque(int mvt)
+bool Game::roque(int mvt){
+    if(mvt==3){
+       if(couleur_==White){
 
+       } 
+    }
+}
 

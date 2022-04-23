@@ -17,7 +17,7 @@ class Queen: public Piece{
      * @param name le nom de la pièce
      * @param location c'est la case d'où se trouve la pièce
      */
-    Queen(Color color, const string &name, Square location);
+        Queen(Color color, const string &name, Square location);
 
     /**
      * @brief cette fonction permet de voir si le mouvement

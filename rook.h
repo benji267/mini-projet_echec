@@ -20,7 +20,7 @@ class Rook : public Piece{
      * @param location c'est la case d'où se trouve la pièce
      * 
      */
-    Rook(Color color, const string &name, Square location);
+        Rook(Color color, const string &name, Square location);
 
     /**
      * @brief cette fonction permet de voir si le mouvement

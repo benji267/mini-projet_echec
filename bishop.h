@@ -20,7 +20,7 @@ class Bishop : public Piece{
      * @param location c'est la case d'où se trouve la pièce
      * 
      */
-    Bishop(Color color, const string &name, Square location);
+        Bishop(Color color, const string &name, Square location);
 
     /**
      * @brief cette fonction permet de voir si le mouvement

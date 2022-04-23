@@ -65,7 +65,7 @@ bool Chessboard::put_piece(Piece* piece, Square const &location, bool &is_captur
         return true;
     }
     else{
-        if(chessboard[location.getLigne()][location.getColonne()]->getColor()!=piece->getColor()){
+        if(chessboard[location.getLigne()][location.getColonne()]->get_Color()!=piece->get_Color()){
             is_capture=true;
             remove_piece(location);
             chessboard[location.getLigne()][location.getColonne()]=piece;
@@ -140,7 +140,7 @@ string Chessboard::final_position() const{
                 final_positionn+=" ";
             }
             else{
-                final_positionn+=chessboard[i][j]->getNompiece();
+                final_positionn+=chessboard[i][j]->get_Name_Piece();
             }
         }
     }

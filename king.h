@@ -12,7 +12,7 @@
 
 class King : public Piece{
     public:
-
+    
     /**
      * @brief constructeur d'un roi
      * @param color c'est la couleur de la pièce
@@ -20,7 +20,7 @@ class King : public Piece{
      * @param location c'est la case d'où se trouve la pièce
      * 
      */
-    King(Color color, const string &name, Square location);
+        King(Color color, const string &name, Square location);
 
     /**
      * @brief cette fonction permet de voir si le mouvement

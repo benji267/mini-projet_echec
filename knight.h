@@ -20,7 +20,7 @@ class Knight : public Piece{
      * @param location c'est la case d'où se trouve la pièce
      * 
      */
-    Knight(Color color, const string &name, Square location);
+        Knight(Color color, const string &name, Square location);
 
     /**
      * @brief cette fonction permet de voir si le mouvement
