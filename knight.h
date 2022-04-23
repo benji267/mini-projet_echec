@@ -28,8 +28,7 @@ class Knight : public Piece{
      * un chevalier.
      * @param position la position de départ de la pièce
      * @param destination position souhaité à atteindre pour la pièce
-     * @param mvmt
      * @return true si le mouvement est légal et false sinon
      */
-    bool is_moovement_legal(Square position, Square destination, int mvmt);
+    bool is_moovement_legal(Square position, Square destination);
 };

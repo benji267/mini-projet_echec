@@ -79,17 +79,42 @@ bool Game::moove(Square positon, Square location, int mvmt){
         return false;
     }
 
-    /* Maintenant on code la possibilité qu'il y ait un obstacle
+    /* Maintenant on code la possibilité qu'il y ait un obstacle.
+    Onne prend pas en compte le chevalier car il n'existe aucun obstacle pour cette pièce.
     */
-   if((piece->get_def() == rook) && (roque_en_cours)
+   if((piece->get_def() == rook) && (roque_en_cours==false)
         ||
         (piece->get_def() == queen)
         ||
         (piece->get_def() == pawn))
         {
-            if
+            if(hurdle(piece,positon, location)==true){
+                cerr<< "Déplacement illégal" <<endl;
+                return false;
+            }
         }
+    
+    bool take=false;
 
+    if(chess.put_piece(location, piece,take)==false){
+        cerr<<"Impossible de placer la pièce"<<endl;
+        return false;
+    }
+
+    chess.remove_piece(position);
+    if(roque_en_cours==false){
+        switch(couleur_){
+            case White:
+                couleur_=Black;
+                break;
+            case Black:
+                couleur_=White;
+                break;
+            default:
+                break;
+        }
+    return true;
+    }
 }
 
 bool Game::hurdle(Piece * piece,Square position, Square location){
@@ -184,5 +209,7 @@ bool Game::hurdle(Piece * piece,Square position, Square location){
 
     return false;
 }
+
+bool Game::roque(int mvt)
 
 

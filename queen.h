@@ -29,5 +29,5 @@ class Queen: public Piece{
      * @return true si le mouvement est autorisé et false sinon.
      * 
      */
-    bool is_moovement_legal(Square position, Square destination, int mvmt);
+    bool is_moovement_legal(Square position, Square destination);
 };

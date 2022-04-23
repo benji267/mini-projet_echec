@@ -29,5 +29,30 @@ bool Rook::is_moovement_legal(Square position, Square destination, int mvmt){
             return true;
         }
     }
+    
+    else if(mvmt==3){
+        if(has_moove){
+            cerr<<" petit roque impossible"<<endl;
+            return false;
+        }
+        else if(abs(destination.getLigne()-position.getLigne())==0
+                &&
+                abs(destination.getColonne()-position.getColonne())==2){
+                    return true;
+                }
+    }
+
+    else if(mvmt==4){
+        if(has_moove){
+            cerr<<" grand roque impossible"<<endl;
+            return false;
+        }
+        else if(abs(destination.getLigne()-position.getLigne())==0
+                &&
+                abs(destination.getColonne()-position.getColonne())==3){
+                    return true;
+                }
+    }
+    return false;
 }
 

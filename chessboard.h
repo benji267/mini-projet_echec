@@ -59,7 +59,7 @@ class Chessboard {
          * 
          * @return true si la pièce a été posée sur la case, false sinon.
          **/
-        bool pose_piece(Piece * piece, Square const& destination, bool & capture);
+        bool put_piece(Piece * piece, Square const& destination, bool & capture);
 
         /**
          * @brief indique le statut de la case (libre/occupée).

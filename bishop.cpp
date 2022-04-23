@@ -7,7 +7,7 @@ Bishop::Bishop(Color color, const string &name, Square location) : Piece(color, 
 
 
 
-bool Bishop::is_moovement_legal(Square position, Square destination, int mvmt) {
+bool Bishop::is_moovement_legal(Square position, Square destination) {
         if(abs(destination.getLigne()-position.getLigne())>7 || abs(destination.getColonne()-position.getColonne())>7){
             cerr<<"Mouvement illégal"<<endl;
             return false;

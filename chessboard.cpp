@@ -56,7 +56,7 @@ Piece* Chessboard::get_piece(Square location) const{
 }
 
 
-bool Chessboard::pose_piece(Piece* piece, Square const &location, bool &is_capture){
+bool Chessboard::put_piece(Piece* piece, Square const &location, bool &is_capture){
     if(location.getLigne()<0 && location.getLigne()>7 && location.getColonne()<0 && location.getColonne()>7){
         return false;
     }

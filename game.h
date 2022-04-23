@@ -73,12 +73,12 @@ class Game {
          * @brief gestion du déplacement suite à la saisie du coup
          *        doit faire appel aux méthodes de vérification 
          *        de validité du coup.
-         * @param origine la case de départ de la pièce
-         * @param destination la case d'arrivée de la pièce
+         * @param position la case de départ de la pièce
+         * @param location la case d'arrivée de la pièce
          * @param type_mvt permet de spécifier s'il s'agit d'un roque
          * @return true si le déplacement a eu lieu, false sinon
          **/
-        bool moove(Square origine, Square destination, int mvmt);
+        bool moove(Square position, Square location, int mvmt);
 
 
         /**
