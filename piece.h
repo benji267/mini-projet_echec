@@ -134,6 +134,149 @@ class Piece{
 
 };
 
+class Bishop : public Piece{
+    public:
+
+    /**
+     * @brief constructeur d'un fou
+     * @param color c'est la couleur de la pièce
+     * @param name le nom de la pièce
+     * @param location c'est la case d'où se trouve la pièce
+     * 
+     */
+        Bishop(Color color, const string &name, Square location);
+
+    /**
+     * @brief cette fonction permet de voir si le mouvement
+     * demandé par l'utilisateur est légale et autorisé pour
+     * un fou.
+     * @param position la position de départ de la pièce
+     * @param destination position souhaité à atteindre pour la pièce
+     * @return true si le mouvement est légal et false sinon
+     */
+    bool is_moovement_legal(Square position, Square destination) const;
+};
+
+class King : public Piece{
+    public:
+    
+    /**
+     * @brief constructeur d'un roi
+     * @param color c'est la couleur de la pièce
+     * @param name le nom de la pièce
+     * @param location c'est la case d'où se trouve la pièce
+     * 
+     */
+        King(Color color, const string &name, Square location);
+
+    /**
+     * @brief cette fonction permet de voir si le mouvement
+     * demandé par l'utilisateur est légale et autorisé pour
+     * un roi.
+     * @param position la position de départ de la pièce
+     * @param destination position souhaité à atteindre pour la pièce
+     * @param mvmt
+     * @return true si le mouvement est légal et false sinon
+     */
+    bool is_moovement_legal(Square position, Square destination, int mvmt) const;
+};
+
+class Knight : public Piece{
+    public:
+
+    /**
+     * @brief constructeur d'un chevalier
+     * @param color c'est la couleur de la pièce
+     * @param name le nom de la pièce
+     * @param location c'est la case d'où se trouve la pièce
+     * 
+     */
+        Knight(Color color, const string &name, Square location);
+
+    /**
+     * @brief cette fonction permet de voir si le mouvement
+     * demandé par l'utilisateur est légale et autorisé pour
+     * un chevalier.
+     * @param position la position de départ de la pièce
+     * @param destination position souhaité à atteindre pour la pièce
+     * @return true si le mouvement est légal et false sinon
+     */
+    bool is_moovement_legal(Square position, Square destination) const;
+};
+
+class Pawn : public Piece{
+    public:
+
+    /**
+     * @brief constructeur d'un pion
+     * @param color c'est la couleur de la pièce
+     * @param name le nom de la pièce
+     * @param location c'est la case d'où se trouve la pièce
+     * 
+     */
+    Pawn(Color color, const string &name, Square location);
+
+    /**
+     * @brief cette fonction permet de voir si le mouvement
+     * demandé par l'utilisateur est légale et autorisé pour
+     * un pion.
+     * @param position la position de départ de la pièce
+     * @param destination position souhaité à atteindre pour la pièce
+     * @param mvmt
+     * @return true si le mouvement est légal et false sinon
+     */
+    bool is_moovement_legal(Square position, Square destination, int mvmt) const;
+};
+
+class Queen: public Piece{
+
+    public:
+
+    /**
+     * @brief constrcuteur de la reine.
+     * @param color c'est la couleur de la pièce
+     * @param name le nom de la pièce
+     * @param location c'est la case d'où se trouve la pièce
+     */
+        Queen(Color color, const string &name, Square location);
+
+    /**
+     * @brief cette fonction permet de voir si le mouvement
+     * demandé par l'utilisateur est légale et autorisé pour
+     * une reine.
+     * @param position la position de départ de la pièce
+     * @param destination position souhaité à atteindre pour la pièce
+     * @param mvmt
+     * @return true si le mouvement est autorisé et false sinon.
+     * 
+     */
+    bool is_moovement_legal(Square position, Square destination) const;
+};
+
+class Rook : public Piece{
+    public:
+
+    /**
+     * @brief constructeur d'une Tour
+     * @param color c'est la couleur de la pièce
+     * @param name le nom de la pièce
+     * @param location c'est la case d'où se trouve la pièce
+     * 
+     */
+        Rook(Color color, const string &name, Square location);
+
+    /**
+     * @brief cette fonction permet de voir si le mouvement
+     * demandé par l'utilisateur est légale et autorisé pour
+     * une tour.
+     * @param position la position de départ de la pièce
+     * @param destination position souhaité à atteindre pour la pièce
+     * @param mvmt
+     * @return true si le mouvement est légal et false sinon
+     */
+    bool is_moovement_legal(Square position, Square destination, int mvmt) const;
+};
+
 
 
 
