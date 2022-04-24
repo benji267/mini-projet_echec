@@ -7,8 +7,7 @@ using namespace std;
 
 /**
  * @brief cette classe a pour vocation d'interagir avec
- * l'utilisateur. Elle gère la gestion des coups et l'affichage
- * de l'échiquier
+ * l'utilisateur.
  **/
 class Game {
     protected:
@@ -28,7 +27,7 @@ class Game {
          */
         bool en_passant_;
         /**
-         * @brief flag lors du roque
+         * @brief
          * 
          */
         bool roque_en_cours;
@@ -71,8 +70,7 @@ class Game {
 
         /**
          * @brief gestion du déplacement suite à la saisie du coup
-         *        doit faire appel aux méthodes de vérification 
-         *        de validité du coup.
+         *
          * @param position la case de départ de la pièce
          * @param location la case d'arrivée de la pièce
          * @param mvmt permet de spécifier s'il s'agit d'un roque
@@ -83,8 +81,7 @@ class Game {
 
         /**
          * @brief s'occupe des vérifications spécifiques aux pions 
-         * comme la prise, la prise en passant, 
-         * ou encore l'obstruction par une pièce devant le pion
+         * comme la prise, la prise en passant etc.
          * @param position 
          * @param location 
          * @param mvmt spécifie le type du mouvement, 
