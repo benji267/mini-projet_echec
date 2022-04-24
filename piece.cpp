@@ -41,7 +41,7 @@ Bishop::Bishop(Color color, const string &name, Square location) : Piece(color, 
 
 
 
-bool Bishop::is_moovement_legal(Square position, Square destination) const{
+bool Bishop::is_moovement_legal(Square position, Square destination, int mvmt) const{
     if(abs(destination.getLigne()-position.getLigne())>7 || abs(destination.getColonne()-position.getColonne())>7){
         cerr<<"Mouvement illégal"<<endl;
         return false;
@@ -120,7 +120,7 @@ bool King::is_moovement_legal(Square position, Square destination, int mvmt) con
 Knight::Knight(Color color, const string &name, Square location) : Piece(color, name, location, knight) {}
 
 
-bool Knight::is_moovement_legal(Square position, Square destination) const{
+bool Knight::is_moovement_legal(Square position, Square destination, int mvmt) const{
     if(abs(destination.getLigne()-position.getLigne())>7 || abs(destination.getColonne()-position.getColonne())>7){
         cout<<"Mouvement illégal"<<endl;
         return false;
@@ -198,7 +198,7 @@ bool Pawn::is_moovement_legal(Square position, Square destination, int mvmt) con
 
 Queen::Queen(Color color, const string &name, Square location) : Piece(color, name, location, queen){}
 
-bool Queen::is_moovement_legal(Square origine, Square destination) const{
+bool Queen::is_moovement_legal(Square origine, Square destination, int mvmt) const{
     if(abs(origine.getLigne()-destination.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
         cout<<"Mouvement illégal"<<endl;
         return false;

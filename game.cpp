@@ -12,7 +12,7 @@ using namespace std;
  * 
  **/
 
-Game::Game(): chess(Chessboard()), couleur_(White), en_passant_(false), roque_en_cours(false) {}
+Game::Game(): chess(Chessboard()), color(White), en_passant_(false), roque_en_cours(false) {}
 
 /**
  * @brief destructeur
@@ -22,8 +22,8 @@ Game::~Game(){}
 
 
 void Game::affiche(){
-    chess.affiche();
-    cout<<"C'est au tour des "<<affiche_couleur(couleur_)<< "de jouer" <<endl;
+    chess.show();
+    cout<<"C'est au tour des "<<affiche_couleur(color)<< "de jouer" <<endl;
 }
 
 string Game::affiche_couleur(Color couleur){
@@ -36,15 +36,15 @@ string Game::affiche_couleur(Color couleur){
     }
 }
 
-void Game::affiche_png(){
-    cout<< endl << chess.final_position << endl;
+void Game::affiche_pgn() const{
+    cout<< endl << chess.final_position() << endl;
 }
 
 void Game::set_roque(bool roque){
     roque_en_cours = roque;
 }
 
-int Game::Check_Pawn(Piece *piece, Square position, Square location, int mvmt){
+int Game::Check_Pawn(Square position, Square location, int mvmt){
     if(!(chess.is_empty_bloc(location))){
         if(abs(location.getLigne()- position.getLigne())==
             abs(location.getColonne() - position.getColonne())){
@@ -57,24 +57,24 @@ int Game::Check_Pawn(Piece *piece, Square position, Square location, int mvmt){
                 ((abs(location.getColonne() - position.getColonne())) == 0)){
                     mvmt=6;
                 }
-    return mvmt;
     }
+    return mvmt;
 }
 
 bool Game::moove(Square positon, Square location, int mvmt){
-    if(chess.is_empty_bloc(position)){
+    if(chess.is_empty_bloc(positon)){
         cerr<<"La case est vide"<<endl;
         return false;
     }
-    Piece *piece = chess.get_piece(position);
-    if(piece->get_Color() != couleur_){
+    Piece *piece = chess.get_piece(positon);
+    if(piece->get_Color() != color){
         cerr<<"Cette pièce n'est pas de votre couleur"<<endl;
         return false;
     }
     if(piece->get_def() == pawn){
-        mvmt = Check_Pawn(piece, position, location, mvmt);
+        mvmt = Check_Pawn(positon, location, mvmt);
     }
-    if(!(piece->is_moovement_legal(position, location, mvmt))){
+    if(!(piece->is_moovement_legal(positon, location, mvmt))){
         cerr<<"Mouvement illégal"<<endl;
         return false;
     }
@@ -96,25 +96,25 @@ bool Game::moove(Square positon, Square location, int mvmt){
     
     bool take=false;
 
-    if(chess.put_piece(location, piece,take)==false){
+    if(chess.put_piece(piece, location,take)==false){
         cerr<<"Impossible de placer la pièce"<<endl;
         return false;
     }
 
-    chess.remove_piece(position);
+    chess.remove_piece(positon);
     if(roque_en_cours==false){
-        switch(couleur_){
+        switch(color){
             case White:
-                couleur_=Black;
+                color=Black;
                 break;
             case Black:
-                couleur_=White;
+                color=White;
                 break;
             default:
                 break;
         }
-    return true;
     }
+    return true;
 }
 
 bool Game::hurdle(Piece * piece,Square position, Square location){
@@ -210,11 +210,61 @@ bool Game::hurdle(Piece * piece,Square position, Square location){
     return false;
 }
 
-bool Game::roque(int mvt){
-    if(mvt==3){
-       if(couleur_==White){
+bool Game::roque(int mvmt){
+    if(mvmt==3){
+       if(color==White){
+            Square position=Square(0,4);
+            Square location=Square(0,6);
+            moove(position,location,mvmt);
+            set_roque(true);
 
+            Square position2=Square(0,7);
+            Square location2=Square(0,5);
+            moove(position2,location2,mvmt);
+            set_roque(false);
+
+            return true;
        } 
+        else{
+            Square position=Square(7,4);
+            Square location=Square(7,6);
+            moove(position,location,mvmt);
+            set_roque(true);
+    
+            Square position2=Square(7,7);
+            Square location2=Square(7,5);
+            moove(position2,location2,mvmt);
+            set_roque(false);
+    
+            return true;
+         }
     }
+    else if(mvmt==4){
+        if(color==White){
+            Square position=Square(0,4);
+            Square location=Square(0,2);
+            moove(position,location,mvmt);
+            set_roque(true);
+
+            Square position2=Square(0,0);
+            Square location2=Square(0,3);
+            moove(position2,location2,mvmt);
+            set_roque(false);
+            return true;
+        }
+        else{
+            Square position=Square(7,4);
+            Square location=Square(7,2);
+            moove(position,location,mvmt);
+            set_roque(true);
+
+            Square position2=Square(7,0);
+            Square location2=Square(7,3);
+            moove(position2,location2,mvmt);
+            set_roque(false);
+            return true;
+        }
+    }
+    return false;
 }
 

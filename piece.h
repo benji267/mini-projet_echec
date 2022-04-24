@@ -154,7 +154,7 @@ class Bishop : public Piece{
      * @param destination position souhaité à atteindre pour la pièce
      * @return true si le mouvement est légal et false sinon
      */
-    bool is_moovement_legal(Square position, Square destination) const;
+    bool is_moovement_legal(Square position, Square destination, int mvmt) const;
 };
 
 class King : public Piece{
@@ -201,7 +201,7 @@ class Knight : public Piece{
      * @param destination position souhaité à atteindre pour la pièce
      * @return true si le mouvement est légal et false sinon
      */
-    bool is_moovement_legal(Square position, Square destination) const;
+    bool is_moovement_legal(Square position, Square destination, int mvmt) const;
 };
 
 class Pawn : public Piece{
@@ -250,7 +250,7 @@ class Queen: public Piece{
      * @return true si le mouvement est autorisé et false sinon.
      * 
      */
-    bool is_moovement_legal(Square position, Square destination) const;
+    bool is_moovement_legal(Square position, Square destination, int mvmt) const;
 };
 
 class Rook : public Piece{

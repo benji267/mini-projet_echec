@@ -15,13 +15,13 @@ class Game {
         /**
          * @brief attribut Chessboard
          */
-        Chessboard echiquier_;
+        Chessboard chess;
         /**
          * @brief permet de savoir quelle est 
          * la couleur attendue et gérer 
          * l'alternance des coups
          */
-        Color couleur_;
+        Color color;
         /**
          * @brief non utilisé, 
          * prévu pour la prise en passant
@@ -61,7 +61,7 @@ class Game {
         /**
          * @brief s'occupe de l'affichage final au format pgn
          **/
-        void affichage_pgn() const;
+        void affiche_pgn() const;
 
         /**
          * @brief
@@ -75,7 +75,7 @@ class Game {
          *        de validité du coup.
          * @param position la case de départ de la pièce
          * @param location la case d'arrivée de la pièce
-         * @param type_mvt permet de spécifier s'il s'agit d'un roque
+         * @param mvmt permet de spécifier s'il s'agit d'un roque
          * @return true si le déplacement a eu lieu, false sinon
          **/
         bool moove(Square position, Square location, int mvmt);
@@ -85,15 +85,14 @@ class Game {
          * @brief s'occupe des vérifications spécifiques aux pions 
          * comme la prise, la prise en passant, 
          * ou encore l'obstruction par une pièce devant le pion
-         * @param piece 
          * @param position 
          * @param location 
-         * @param type_mvt spécifie le type du mouvement, 
+         * @param mvmt spécifie le type du mouvement, 
          *      permet de dissocier les différents mouvements
          * @return true 
          * @return false 
          */
-        int Check_Pawn(Piece * piece,Square position, Square location, int mvmt);
+        int Check_Pawn(Square position, Square location, int mvmt);
 
         /**
          * @brief vérifie que la pièce ne passe pas au-dessus
@@ -117,7 +116,8 @@ class Game {
          * qui dépendent de la couleur et du type de roque.
          * Valable si ces pièces n'ont jamais bougé.
          * Fait appel à deplace()
+         * @param mvmt le type de mouvement
          **/
-        bool roque(int mvt);
+        bool roque(int mvmt);
 
 };

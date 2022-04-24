@@ -18,6 +18,7 @@
         }
     }
 
+
     chessboard[0][0] = new Rook(White, " \u2656 ", Square(0, 0));
     chessboard[0][1] = new Knight(White, " \u2658 ", Square(0, 1));
     chessboard[0][2] = new Bishop(White, " \u2657 ", Square(0, 2));
@@ -38,15 +39,18 @@
     for(int i=0; i<8; i++){
         chessboard[1][i] = new Pawn(White, " \u2659 ", Square(1, i));
         chessboard[6][i] = new Pawn(Black, " \u265F ", Square(6, i));
+    }
 }
 
 
-Chessboard::~Chessboard(){}
+Chessboard::~Chessboard() 
+    {}
+
 
 void Chessboard::remove_piece(Square location){
     chessboard[location.getLigne()][location.getColonne()]=nullptr;
-    }
 }
+
 
 Piece* Chessboard::get_piece(Square location) const{
     if(location.getLigne()<0 && location.getLigne()>7 && location.getColonne()<0 && location.getColonne()>7){
