@@ -66,7 +66,7 @@ $(function() {
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../da/dc7/classPiece-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Piece Class Reference</div>  </div>
+<div class="title">Piece Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -118,6 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3bbea2942cd774612ac447f84cf387a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df0/classPiece.html#a3bbea2942cd774612ac447f84cf387a6">show</a> () const</td></tr>
 <tr class="memdesc:a3bbea2942cd774612ac447f84cf387a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">affiche le nom de la pièce  <a href="../../d5/df0/classPiece.html#a3bbea2942cd774612ac447f84cf387a6">More...</a><br /></td></tr>
 <tr class="separator:a3bbea2942cd774612ac447f84cf387a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b303d5f0ff13899c0e662f70f96d2b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df0/classPiece.html#ab2b303d5f0ff13899c0e662f70f96d2b">is_moovement_legal</a> (<a class="el" href="../../d3/d72/classSquare.html">Square</a> position, <a class="el" href="../../d3/d72/classSquare.html">Square</a> location, int mvmt) const =0</td></tr>
+<tr class="memdesc:ab2b303d5f0ff13899c0e662f70f96d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">vérifie si le déplacement est possible  <a href="../../d5/df0/classPiece.html#ab2b303d5f0ff13899c0e662f70f96d2b">More...</a><br /></td></tr>
+<tr class="separator:ab2b303d5f0ff13899c0e662f70f96d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -248,6 +251,13 @@ Protected Attributes</h2></td></tr>
 
 <p>renvoie la couleur de la pièce </p>
 <dl class="section return"><dt>Returns</dt><dd>la couleur </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/df0/classPiece_a43c3f26ef40bed56c375fd3490c659d8_icgraph.png" border="0" usemap="#d5/df0/classPiece_a43c3f26ef40bed56c375fd3490c659d8_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -268,6 +278,13 @@ Protected Attributes</h2></td></tr>
 
 <p>renvoie le type de pièce </p>
 <dl class="section return"><dt>Returns</dt><dd>renvoie un type de pièce de la struct Def_piece </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/df0/classPiece_a4adcf2e30cdd2e973bc0704f8eb7b647_icgraph.png" border="0" usemap="#d5/df0/classPiece_a4adcf2e30cdd2e973bc0704f8eb7b647_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -328,6 +345,75 @@ Protected Attributes</h2></td></tr>
 
 <p>renvoie le nom de la pièce </p>
 <dl class="section return"><dt>Returns</dt><dd>le nom de la pièce </dd></dl>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/df0/classPiece_a622d60ffe801afa5d6dc2a9404e13c84_icgraph.png" border="0" usemap="#d5/df0/classPiece_a622d60ffe801afa5d6dc2a9404e13c84_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab2b303d5f0ff13899c0e662f70f96d2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b303d5f0ff13899c0e662f70f96d2b">&#9670;&nbsp;</a></span>is_moovement_legal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Piece::is_moovement_legal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d72/classSquare.html">Square</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d72/classSquare.html">Square</a>&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mvmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vérifie si le déplacement est possible </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>position de départ </td></tr>
+    <tr><td class="paramname">location</td><td>position d'arrivée </td></tr>
+    <tr><td class="paramname">mvmt</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>renvoie True si le déplacement est possible et False sinon </dd></dl>
+
+<p>Implemented in <a class="el" href="../../db/d7e/classRook.html#a5b9d248e45ee436696fe14f537700eb6">Rook</a>, <a class="el" href="../../d5/d3f/classQueen.html#a25cbc74a3a45cb808cf7dc54cd50e2fb">Queen</a>, <a class="el" href="../../de/dff/classPawn.html#af678477e0d92c4f70fc7a10af73710fa">Pawn</a>, <a class="el" href="../../d5/d23/classKnight.html#ae4df0bd7f4652776a9444221967f0b80">Knight</a>, <a class="el" href="../../d1/db5/classKing.html#aa28e7a0fdb37926c90ad13138f2c3e62">King</a>, and <a class="el" href="../../de/dfb/classBishop.html#a9c80bce0f44af7ec7a3cc4fbf668274c">Bishop</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../d5/df0/classPiece_ab2b303d5f0ff13899c0e662f70f96d2b_icgraph.png" border="0" usemap="#d5/df0/classPiece_ab2b303d5f0ff13899c0e662f70f96d2b_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>

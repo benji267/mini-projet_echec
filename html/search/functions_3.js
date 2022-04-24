@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deplace_112',['deplace',['../d9/d68/classGame.html#abf05d11e85b3e7797db508577eb46476',1,'Game']]]
+  ['final_5fposition_98',['final_position',['../df/d81/classChessboard.html#a964d18040457b83fad3cb3a1a9a3a16f',1,'Chessboard']]]
 ];

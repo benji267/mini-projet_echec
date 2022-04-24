@@ -53,7 +53,7 @@ void Chessboard::remove_piece(Square location){
 
 
 Piece* Chessboard::get_piece(Square location) const{
-    if(location.getLigne()<0 && location.getLigne()>7 && location.getColonne()<0 && location.getColonne()>7){
+    if(location.getLigne()<0 || location.getLigne()>7 || location.getColonne()<0 || location.getColonne()>7){
         return chessboard[location.getLigne()][location.getColonne()];;
     }
     return nullptr;
@@ -61,7 +61,7 @@ Piece* Chessboard::get_piece(Square location) const{
 
 
 bool Chessboard::put_piece(Piece* piece, Square const &location, bool &is_capture){
-    if(location.getLigne()<0 && location.getLigne()>7 && location.getColonne()<0 && location.getColonne()>7){
+    if(location.getLigne()<0 || location.getLigne()>7 || location.getColonne()<0 || location.getColonne()>7){
         return false;
     }
     if(chessboard[location.getLigne()][location.getColonne()]==nullptr){
@@ -82,7 +82,7 @@ bool Chessboard::put_piece(Piece* piece, Square const &location, bool &is_captur
 }
 
 bool Chessboard::is_empty_bloc(Square location) const{
-    if(location.getLigne()<0 && location.getLigne()>7 && location.getColonne()<0 && location.getColonne()>7){
+    if(location.getLigne()<0 || location.getLigne()>7 || location.getColonne()<0 || location.getColonne()>7){
         return false;
     }
     if(chessboard[location.getLigne()][location.getColonne()]==nullptr){

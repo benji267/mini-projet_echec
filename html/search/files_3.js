@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['king_2ecpp_92',['king.cpp',['../d2/db7/king_8cpp.html',1,'']]],
-  ['king_2eh_93',['king.h',['../dd/d46/king_8h.html',1,'']]],
-  ['knight_2ecpp_94',['knight.cpp',['../d1/de7/knight_8cpp.html',1,'']]],
-  ['knight_2eh_95',['knight.h',['../de/dba/knight_8h.html',1,'']]]
+  ['piece_2ecpp_84',['piece.cpp',['../dd/d2d/piece_8cpp.html',1,'']]],
+  ['piece_2eh_85',['piece.h',['../d9/d39/piece_8h.html',1,'']]]
 ];

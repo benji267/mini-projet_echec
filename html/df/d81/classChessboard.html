@@ -96,9 +96,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aedb59c02419b9dfc6527346fdf9d7acb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d81/classChessboard.html#aedb59c02419b9dfc6527346fdf9d7acb">remove_piece</a> (<a class="el" href="../../d3/d72/classSquare.html">Square</a> location)</td></tr>
 <tr class="memdesc:aedb59c02419b9dfc6527346fdf9d7acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">place un pointeur nul sur la case origine  <a href="../../df/d81/classChessboard.html#aedb59c02419b9dfc6527346fdf9d7acb">More...</a><br /></td></tr>
 <tr class="separator:aedb59c02419b9dfc6527346fdf9d7acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43887fc0d7fa45544c193304088bf629"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d81/classChessboard.html#a43887fc0d7fa45544c193304088bf629">pose_piece</a> (<a class="el" href="../../d5/df0/classPiece.html">Piece</a> *piece, <a class="el" href="../../d3/d72/classSquare.html">Square</a> const &amp;destination, bool &amp;capture)</td></tr>
-<tr class="memdesc:a43887fc0d7fa45544c193304088bf629"><td class="mdescLeft">&#160;</td><td class="mdescRight">pose une pièce à la case spécifiée La pose est possile si la case est vide ou si elle contient une pièce de couleur opposée à <code>pièce</code>.  <a href="../../df/d81/classChessboard.html#a43887fc0d7fa45544c193304088bf629">More...</a><br /></td></tr>
-<tr class="separator:a43887fc0d7fa45544c193304088bf629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b5dfe224dabc92ed01ed11667ba61a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d81/classChessboard.html#a1b5dfe224dabc92ed01ed11667ba61a2">put_piece</a> (<a class="el" href="../../d5/df0/classPiece.html">Piece</a> *piece, <a class="el" href="../../d3/d72/classSquare.html">Square</a> const &amp;destination, bool &amp;capture)</td></tr>
+<tr class="memdesc:a1b5dfe224dabc92ed01ed11667ba61a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">pose une pièce à la case spécifiée La pose est possile si la case est vide ou si elle contient une pièce de couleur opposée à <code>pièce</code>.  <a href="../../df/d81/classChessboard.html#a1b5dfe224dabc92ed01ed11667ba61a2">More...</a><br /></td></tr>
+<tr class="separator:a1b5dfe224dabc92ed01ed11667ba61a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c28aa76c3eae36503efa734abc8d3f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d81/classChessboard.html#a1c28aa76c3eae36503efa734abc8d3f1">is_empty_bloc</a> (<a class="el" href="../../d3/d72/classSquare.html">Square</a> square) const</td></tr>
 <tr class="memdesc:a1c28aa76c3eae36503efa734abc8d3f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">indique le statut de la case (libre/occupée).  <a href="../../df/d81/classChessboard.html#a1c28aa76c3eae36503efa734abc8d3f1">More...</a><br /></td></tr>
 <tr class="separator:a1c28aa76c3eae36503efa734abc8d3f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,13 +137,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>constructeur par défaut qui initialise l'échiquier Place les pièces en position initiale </p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../df/d81/classChessboard_a0647fd37fc04def4958a586c3d0100ab_cgraph.png" border="0" usemap="#df/d81/classChessboard_a0647fd37fc04def4958a586c3d0100ab_cgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -163,13 +156,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>destructeur </p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../df/d81/classChessboard_a53eac522998d8d92cca409493c773f54_icgraph.png" border="0" usemap="#df/d81/classChessboard_a53eac522998d8d92cca409493c773f54_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -191,6 +177,20 @@ Protected Attributes</h2></td></tr>
 
 <p>la position finale du jeu sous une forme canonique, on récupère le contenu de chaque case en parcoutant l'échiquier dans l'ordre et on ajoute un espace vide si nullptr. </p>
 <dl class="section return"><dt>Returns</dt><dd>une chaine de caractères modélisant l'échiquier </dd></dl>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../df/d81/classChessboard_a964d18040457b83fad3cb3a1a9a3a16f_cgraph.png" border="0" usemap="#df/d81/classChessboard_a964d18040457b83fad3cb3a1a9a3a16f_cgraph" alt=""/></div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../df/d81/classChessboard_a964d18040457b83fad3cb3a1a9a3a16f_icgraph.png" border="0" usemap="#df/d81/classChessboard_a964d18040457b83fad3cb3a1a9a3a16f_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -225,6 +225,13 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d81/classChessboard_a919c8fa5906e0aaf902cd35a71c670e5_cgraph.png" border="0" usemap="#df/d81/classChessboard_a919c8fa5906e0aaf902cd35a71c670e5_cgraph" alt=""/></div>
 </div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../df/d81/classChessboard_a919c8fa5906e0aaf902cd35a71c670e5_icgraph.png" border="0" usemap="#df/d81/classChessboard_a919c8fa5906e0aaf902cd35a71c670e5_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -252,12 +259,19 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true si la case est vide, false sinon. </dd></dl>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d81/classChessboard_a1c28aa76c3eae36503efa734abc8d3f1_cgraph.png" border="0" usemap="#df/d81/classChessboard_a1c28aa76c3eae36503efa734abc8d3f1_cgraph" alt=""/></div>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../df/d81/classChessboard_a1c28aa76c3eae36503efa734abc8d3f1_icgraph.png" border="0" usemap="#df/d81/classChessboard_a1c28aa76c3eae36503efa734abc8d3f1_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -289,14 +303,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a43887fc0d7fa45544c193304088bf629"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43887fc0d7fa45544c193304088bf629">&#9670;&nbsp;</a></span>pose_piece()</h2>
+<a id="a1b5dfe224dabc92ed01ed11667ba61a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b5dfe224dabc92ed01ed11667ba61a2">&#9670;&nbsp;</a></span>put_piece()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Chessboard::pose_piece </td>
+          <td class="memname">bool Chessboard::put_piece </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d5/df0/classPiece.html">Piece</a> *&#160;</td>
           <td class="paramname"><em>piece</em>, </td>
@@ -331,12 +345,19 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true si la pièce a été posée sur la case, false sinon. </dd></dl>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="../../df/d81/classChessboard_a43887fc0d7fa45544c193304088bf629_cgraph.png" border="0" usemap="#df/d81/classChessboard_a43887fc0d7fa45544c193304088bf629_cgraph" alt=""/></div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../df/d81/classChessboard_a1b5dfe224dabc92ed01ed11667ba61a2_cgraph.png" border="0" usemap="#df/d81/classChessboard_a1b5dfe224dabc92ed01ed11667ba61a2_cgraph" alt=""/></div>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../df/d81/classChessboard_a1b5dfe224dabc92ed01ed11667ba61a2_icgraph.png" border="0" usemap="#df/d81/classChessboard_a1b5dfe224dabc92ed01ed11667ba61a2_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -358,11 +379,18 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>place un pointeur nul sur la case origine </p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../df/d81/classChessboard_aedb59c02419b9dfc6527346fdf9d7acb_cgraph.png" border="0" usemap="#df/d81/classChessboard_aedb59c02419b9dfc6527346fdf9d7acb_cgraph" alt=""/></div>
+</div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../df/d81/classChessboard_aedb59c02419b9dfc6527346fdf9d7acb_icgraph.png" border="0" usemap="#df/d81/classChessboard_aedb59c02419b9dfc6527346fdf9d7acb_icgraph" alt=""/></div>
 </div>
 
@@ -384,6 +412,13 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>affiche l'échiquier dans le terminal </p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="../../df/d81/classChessboard_aff092748eafdb201da03c247a0aa064a_icgraph.png" border="0" usemap="#df/d81/classChessboard_aff092748eafdb201da03c247a0aa064a_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>

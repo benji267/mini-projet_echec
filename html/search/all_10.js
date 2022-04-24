@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['readme_2emd_55',['README.md',['../da/ddd/README_8md.html',1,'']]],
-  ['remove_5fpiece_56',['remove_piece',['../df/d81/classChessboard.html#aedb59c02419b9dfc6527346fdf9d7acb',1,'Chessboard']]],
-  ['rook_57',['Rook',['../db/d7e/classRook.html',1,'Rook'],['../db/d7e/classRook.html#a01087d448096877db7b7dd7d77c185f6',1,'Rook::Rook()'],['../d9/d39/piece_8h.html#afa9e10c378566203493588923fad8fe2a86a1080ba85c6e5fb246d32259f5f16f',1,'rook():&#160;piece.h']]],
-  ['rook_2ecpp_58',['rook.cpp',['../d1/d42/rook_8cpp.html',1,'']]],
-  ['rook_2eh_59',['rook.h',['../d8/d1c/rook_8h.html',1,'']]],
-  ['roque_60',['roque',['../d9/d68/classGame.html#a6a672422c239d98dcc84545a8829d92c',1,'Game']]],
-  ['roque_5fen_5fcours_61',['roque_en_cours',['../d9/d68/classGame.html#ac856c1159092c3279c8143478e4c2669',1,'Game']]]
+  ['set_5froque_56',['set_roque',['../d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece',1,'Game']]],
+  ['show_57',['show',['../df/d81/classChessboard.html#aff092748eafdb201da03c247a0aa064a',1,'Chessboard::show()'],['../d5/df0/classPiece.html#a3bbea2942cd774612ac447f84cf387a6',1,'Piece::show()']]],
+  ['square_58',['Square',['../d3/d72/classSquare.html',1,'Square'],['../d5/df0/classPiece.html#a7601632ce309de8968366b552a79cf2f',1,'Piece::square()'],['../d3/d72/classSquare.html#a364add7a4e0d6e52ec1457586673fcf8',1,'Square::Square(int lig, int col)'],['../d3/d72/classSquare.html#a4c6abe0989c87c0f6ed3981316fcd65d',1,'Square::Square(const string &amp;position)']]],
+  ['square_2ecpp_59',['square.cpp',['../df/dc6/square_8cpp.html',1,'']]],
+  ['square_2eh_60',['square.h',['../d7/d3c/square_8h.html',1,'']]],
+  ['square_5fto_5fstring_61',['square_to_string',['../d3/d72/classSquare.html#a53fc248a19ab0d1db4b6cdd6bb9c6eb3',1,'Square']]]
 ];

@@ -48,13 +48,15 @@ int Game::Check_Pawn(Square position, Square location, int mvmt){
     if(!(chess.is_empty_bloc(location))){
         if(abs(location.getLigne()- position.getLigne())==
             abs(location.getColonne() - position.getColonne())){
-        mvmt=5;
+                mvmt=5;
         }
-        else if(((abs(location.getLigne() - position.getLigne())) == 1)
+        else if(
+                (abs(location.getLigne() - position.getLigne()) == 1)
                 ||
-                ((abs(location.getLigne() - position.getLigne())) == 2)
+                (abs(location.getLigne() - position.getLigne() == 2)
                 &&
-                ((abs(location.getColonne() - position.getColonne())) == 0)){
+                (abs(location.getColonne() - position.getColonne()) == 0))
+                ){
                     mvmt=6;
                 }
     }
@@ -71,6 +73,7 @@ bool Game::moove(Square positon, Square location, int mvmt){
         cerr<<"Cette pièce n'est pas de votre couleur"<<endl;
         return false;
     }
+    
     if(piece->get_def() == pawn){
         mvmt = Check_Pawn(positon, location, mvmt);
     }
@@ -82,7 +85,7 @@ bool Game::moove(Square positon, Square location, int mvmt){
     /* Maintenant on code la possibilité qu'il y ait un obstacle.
     Onne prend pas en compte le chevalier car il n'existe aucun obstacle pour cette pièce.
     */
-   if((piece->get_def() == rook) && (roque_en_cours==false)
+   if(((piece->get_def() == rook) && (roque_en_cours==false))
         ||
         (piece->get_def() == queen)
         ||
@@ -119,14 +122,14 @@ bool Game::moove(Square positon, Square location, int mvmt){
 
 bool Game::hurdle(Piece * piece,Square position, Square location){
     /* Pour commencer je vais calculer des constantes qui me seront utiles dans ce code  */
-
+    piece->get_Name_Piece();
     int gap_line=abs(location.getLigne() - position.getLigne());
     int gap_col= abs(location.getColonne() - position.getColonne());
     int i;
     
     /* on commence par coder la détection d'obstacles horizontales donc sur une même ligne */
 
-    if(gap_line=0 && gap_col !=0){
+    if(gap_line==0 && gap_col !=0){
         /* On commence par les déplacements sur la droite*/
         if(gap_col > 0){
             for(i=1; i<gap_col; i++){

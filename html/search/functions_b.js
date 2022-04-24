@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['remove_5fpiece_133',['remove_piece',['../df/d81/classChessboard.html#aedb59c02419b9dfc6527346fdf9d7acb',1,'Chessboard']]],
-  ['rook_134',['Rook',['../db/d7e/classRook.html#a01087d448096877db7b7dd7d77c185f6',1,'Rook']]],
-  ['roque_135',['roque',['../d9/d68/classGame.html#a6a672422c239d98dcc84545a8829d92c',1,'Game']]]
+  ['remove_5fpiece_120',['remove_piece',['../df/d81/classChessboard.html#aedb59c02419b9dfc6527346fdf9d7acb',1,'Chessboard']]],
+  ['right_5finput_121',['right_input',['../dd/d66/echecs_8cpp.html#abcad6571107dc5263f7cab498de642b4',1,'echecs.cpp']]],
+  ['rook_122',['Rook',['../db/d7e/classRook.html#a01087d448096877db7b7dd7d77c185f6',1,'Rook']]],
+  ['roque_123',['roque',['../d9/d68/classGame.html#ac6bf6130a938fc687f418e77d5c9aa95',1,'Game']]]
 ];

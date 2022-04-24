@@ -5,5 +5,5 @@ digraph "Rook"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="{Rook\n||+ Rook()\l+ is_moovement_legal()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node2 [label="{Piece\n|# color\l# piece_name\l# square\l# dpiece\l# has_moove\l|+ Piece()\l+ Piece()\l+ ~Piece()\l+ get_Color()\l+ get_Name_Piece()\l+ get_location()\l+ get_def()\l+ get_moovement()\l+ show()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/df0/classPiece.html",tooltip="Cette classe va gérer les différentes pièces présentes sur l'échiquier et leurs couleurs à chacunes."];
+  Node2 [label="{Piece\n|# color\l# piece_name\l# square\l# dpiece\l# has_moove\l|+ Piece()\l+ Piece()\l+ ~Piece()\l+ get_Color()\l+ get_Name_Piece()\l+ get_location()\l+ get_def()\l+ get_moovement()\l+ show()\l+ is_moovement_legal()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/df0/classPiece.html",tooltip="Cette classe va gérer les différentes pièces présentes sur l'échiquier et leurs couleurs à chacunes."];
 }

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bishop_2ecpp_86',['bishop.cpp',['../db/d62/bishop_8cpp.html',1,'']]],
-  ['bishop_2eh_87',['bishop.h',['../d9/d79/bishop_8h.html',1,'']]]
+  ['chessboard_2ecpp_79',['chessboard.cpp',['../d3/d03/chessboard_8cpp.html',1,'']]],
+  ['chessboard_2eh_80',['chessboard.h',['../df/d3e/chessboard_8h.html',1,'']]]
 ];

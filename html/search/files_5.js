@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['queen_2ecpp_100',['queen.cpp',['../d4/d21/queen_8cpp.html',1,'']]],
-  ['queen_2eh_101',['queen.h',['../d0/d0a/queen_8h.html',1,'']]]
+  ['square_2ecpp_87',['square.cpp',['../df/dc6/square_8cpp.html',1,'']]],
+  ['square_2eh_88',['square.h',['../d7/d3c/square_8h.html',1,'']]]
 ];

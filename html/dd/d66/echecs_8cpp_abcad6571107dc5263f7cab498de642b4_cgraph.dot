@@ -1,0 +1,14 @@
+digraph "right_input"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="right_input",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="On vérifie si la commande rentrée est correcte et renvoie le numéro du déplacement."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="correct_input",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d66/echecs_8cpp.html#ade76fd8a6f9734fa7c70e7f747be9b96",tooltip="On vérifie si la commande rentrée est correcte."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="correct_input_grandroque",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d66/echecs_8cpp.html#aa5e90a5746399f1195222da5d30211fc",tooltip="On vérifie si la commande rentrée est correcte pour le grand roque."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="correct_input_petitroque",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d66/echecs_8cpp.html#a84bd4be358b9e5d72bb6b14890527a2d",tooltip="On vérifie si la commande rentrée est correcte pour le petit roque."];
+}

@@ -8,24 +8,24 @@ OBJ=echecs.o  square.o  chessboard.o  piece.o  game.o
 all: $(EXE)
 
 $(EXE): $(OBJ)
-	$(cpp) $(CFLAGS) $(OBJ)  -o $@
+	$(CC) $(CFLAGS) $(OBJ)  -o $@
 
 SUFFIXES:.cpp .o
 
 echecs-main.o : echecs.cpp chessboard.cpp game.cpp
-	$(cpp) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $<
 
 game.o: game.cpp chessboard.h piece.h square.h
-	$(cpp) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $<
 
 chessboard.o : chessboard.cpp piece.h square.h
-	$(cpp) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $<
 
 piece.o: piece.cpp piece.h square.h chessboard.h
-	$(cpp) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $<
 
 square.o : square.cpp square.h
-	$(cpp) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $<
 
 doc: html/index.html
 	doxygen

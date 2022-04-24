@@ -41,13 +41,15 @@ Bishop::Bishop(Color color, const string &name, Square location) : Piece(color, 
 
 
 
-bool Bishop::is_moovement_legal(Square position, Square destination, int mvmt) const{
-    if(abs(destination.getLigne()-position.getLigne())>7 || abs(destination.getColonne()-position.getColonne())>7){
-        cerr<<"Mouvement illégal"<<endl;
-        return false;
-    }
-    else if(abs(destination.getLigne()-position.getLigne())-abs(destination.getColonne()-position.getColonne())==0){
-        return true;
+bool Bishop::is_moovement_legal(Square position, Square destination, int mvmt=0) const{
+    if(mvmt>=0){
+        if(abs(destination.getLigne()-position.getLigne())>7 || abs(destination.getColonne()-position.getColonne())>7){
+            cerr<<"Mouvement illégal"<<endl;
+            return false;
+        }
+        else if(abs(destination.getLigne()-position.getLigne())-abs(destination.getColonne()-position.getColonne())==0){
+            return true;
+        }
     }
     return false;
 }
@@ -120,14 +122,16 @@ bool King::is_moovement_legal(Square position, Square destination, int mvmt) con
 Knight::Knight(Color color, const string &name, Square location) : Piece(color, name, location, knight) {}
 
 
-bool Knight::is_moovement_legal(Square position, Square destination, int mvmt) const{
-    if(abs(destination.getLigne()-position.getLigne())>7 || abs(destination.getColonne()-position.getColonne())>7){
-        cout<<"Mouvement illégal"<<endl;
-        return false;
-    }
-    if(abs(position.getColonne()-destination.getColonne())%2==0 || abs(destination.getLigne()-position.getLigne())%2==0){
-        if(abs(position.getColonne()-destination.getColonne())+abs(destination.getLigne()-position.getLigne())==3){
-            return true;
+bool Knight::is_moovement_legal(Square position, Square destination, int mvmt=0) const{
+    if(mvmt>=0){
+        if(abs(destination.getLigne()-position.getLigne())>7 || abs(destination.getColonne()-position.getColonne())>7){
+            cout<<"Mouvement illégal"<<endl;
+            return false;
+        }
+        if(abs(position.getColonne()-destination.getColonne())%2==0 || abs(destination.getLigne()-position.getLigne())%2==0){
+            if(abs(position.getColonne()-destination.getColonne())+abs(destination.getLigne()-position.getLigne())==3){
+                return true;
+            }
         }
     }
     cout<<"Mouvement illégal"<<endl;
@@ -198,38 +202,20 @@ bool Pawn::is_moovement_legal(Square position, Square destination, int mvmt) con
 
 Queen::Queen(Color color, const string &name, Square location) : Piece(color, name, location, queen){}
 
-bool Queen::is_moovement_legal(Square origine, Square destination, int mvmt) const{
-    if(abs(origine.getLigne()-destination.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
-        cout<<"Mouvement illégal"<<endl;
-        return false;
-    }
-    if(origine.getLigne()==destination.getLigne()){
-            
-        if(abs(origine.getColonne()-destination.getColonne())>7){
+bool Queen::is_moovement_legal(Square origine, Square destination, int mvmt=0) const{
+    if(mvmt>=0){
+        if(abs(origine.getLigne()-destination.getLigne())>7 || abs(destination.getColonne()-origine.getColonne())>7){
             cout<<"Mouvement illégal"<<endl;
             return false;
         }
-
-        else{
-            return true;
-        }
+        else if(((origine.getLigne()==destination.getLigne())
+            ||
+            (origine.getColonne()==destination.getColonne()))
+            ||
+            (abs(destination.getLigne()-origine.getLigne())==abs(destination.getColonne()-origine.getColonne()))){
+                return true;
+            }
     }
-
-    else if(origine.getColonne()==destination.getColonne()){
-
-        if(abs(destination.getLigne()-origine.getLigne())>7){
-            cout<<"Mouvement illégal"<<endl;
-            return false;
-        }
-
-        else{
-            return true;
-        }
-    }
-    else if(abs(destination.getLigne()-origine.getLigne())-abs(destination.getColonne()-origine.getColonne())==0){
-        return true;
-    }
-
     cout<<"Mouvement illégal"<<endl;
     return false;
 }
