@@ -82,6 +82,8 @@ class Piece{
          */
         ~Piece();
 
+        
+
         /**
          * @brief renvoie la couleur de la pièce
          * @return la couleur

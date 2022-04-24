@@ -82,16 +82,14 @@ bool Chessboard::put_piece(Piece* piece, Square const &location, bool &is_captur
 }
 
 bool Chessboard::is_empty_bloc(Square location) const{
-    if(location.getLigne()<0 || location.getLigne()>7 || location.getColonne()<0 || location.getColonne()>7){
-        return false;
-    }
-    if(chessboard[location.getLigne()][location.getColonne()]==nullptr){
+    {
+    if (get_piece(location)==nullptr)
         return true;
-    }
-    else{
-        return false;
+    return false;
     }
 }
+
+
 
 string Chessboard::pgn_piece_name(string const name, bool view_pawn, bool view_color) const {
 
@@ -126,20 +124,23 @@ string Chessboard::pgn_piece_name(string const name, bool view_pawn, bool view_c
 
 
 
-string Chessboard::final_position() const{
-    string final_positionn;
-    for(int i=0; i<8; i++){
-        for(int j=0; j<8; j++){
-            if(chessboard[i][j]==nullptr){
-                final_positionn+=" ";
-            }
-            else{
-                final_positionn+=chessboard[i][j]->get_Name_Piece();
-            }
+string Chessboard::final_position() const {
+    string output;
+    for (size_t row(1); row<=8; row++){
+        for (char col('a');col<='h';col++) {
+            Square square(col+to_string(row)); 
+            if (!(is_empty_bloc(square)))
+                 output += pgn_piece_name(get_piece(square)->get_Name_Piece(),true,true);
+            output += ",";
         }
     }
-    return final_positionn;
+    return output;
 }
+
+
+
+
+
 
 
 void Chessboard::show() const{

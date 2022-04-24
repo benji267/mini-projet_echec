@@ -63,7 +63,7 @@ int Game::Check_Pawn(Square position, Square location, int mvmt){
     return mvmt;
 }
 
-bool Game::moove(Square positon, Square location, int mvmt){
+bool Game::moove(Square positon, Square location, int mvmt){ 
     if(chess.is_empty_bloc(positon)){
         cerr<<"La case est vide"<<endl;
         return false;

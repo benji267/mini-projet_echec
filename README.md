@@ -17,6 +17,7 @@
 
 ### Doxygen
 ***
+>** Il faut ouvrir le dossier html puis le fichier html.index**
 
 ### Auteur
 ***
