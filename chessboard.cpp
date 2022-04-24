@@ -93,46 +93,36 @@ bool Chessboard::is_empty_bloc(Square location) const{
     }
 }
 
-string Chessboard::pgn_piece(string const name) const{
-    string pgn_piece;
-        if(name=="\u2656 "){
-            pgn_piece="wR";
-        }
-        else if(name=="\u2658 "){
-            pgn_piece="wC";
-        }
-        else if(name=="\u2657 "){
-            pgn_piece="wB";
-        }
-        else if(name=="\u2655 "){
-            pgn_piece="wQ";
-        }
-        else if(name=="\u2654 "){
-            pgn_piece="wK";
-        }
-        else if(name=="u2659"){
-            pgn_piece="wP";
-        }
-        else if(name=="\u265C "){
-            pgn_piece="bR";
-        }
-        else if(name=="\u265E "){
-            pgn_piece="bC";
-        }
-        else if(name=="\u265D "){
-            pgn_piece="bB";
-        }
-        else if(name=="\u265B "){
-            pgn_piece="bQ";
-        }
-        else if(name=="\u265A "){
-            pgn_piece="bK";
-        }
-        else if(name=="\u265F"){
-            pgn_piece="bP";
-        }
-    return pgn_piece;
+string Chessboard::pgn_piece_name(string const name, bool view_pawn, bool view_color) const {
+
+  string psymb;
+  if      (name=="\u2656") psymb="R";  // Rook W
+  else if (name=="\u2658") psymb="N";  // Knight W
+  else if (name=="\u2657") psymb="B";  // Bishop W
+  else if (name=="\u2655") psymb="Q";  // Queen W
+  else if (name=="\u2654") psymb="K";  // King W
+  else if (name.rfind("\u2659",0)==0 && view_pawn) psymb= "P"; // Pawn W
+  if (psymb.size()>0) { // one of the white piece has been found
+          if (view_color)
+                return "w"+psymb;
+          else
+                return psymb;
+  } 
+  if      (name=="\u265C") psymb= "R";  // Rook B
+  else if (name=="\u265E") psymb= "N";  // Knight B
+  else if (name=="\u265D") psymb= "B"; // Bishop B
+  else if (name=="\u265B")  psymb= "Q"; // Queen B
+  else if (name=="\u265A")  psymb= "K"; // King B
+  else if (name.rfind("\u265F",0)==0 && view_pawn) psymb= "P"; // Pawn B
+  if (psymb.size()>0) { // one of the black piece has been found
+          if (view_color)
+                return "b"+psymb;
+          else
+                return psymb;
+  } 
+  else return "";
 }
+
 
 
 

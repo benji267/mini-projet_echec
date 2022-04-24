@@ -76,13 +76,16 @@ class Chessboard {
         /**
          * @brief est utilisée par final_position()
          * pour renvoyer le symbole utilisé dans la notation pgn.
+         * 
          * @param name nom de la pièce
          * la valeur de la pièce
+         * @param view_pawn si la pièce est un pion
+         * @param view_color si la pièce est blanche ou noire
          * @return le nom au format pgn: rien si la case est vide,
          *         sinon `w` ou `b` pour la couleur, suivi d'un caractère
          *         pour la pièce (R,N,B,Q,K,P). 
          **/
-        string pgn_piece(string const name) const;
+        string pgn_piece_name(string const name, bool view_pawn, bool view_color) const;
 
         /**
          *  @brief affiche l'échiquier dans le terminal
