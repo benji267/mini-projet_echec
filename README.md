@@ -13,7 +13,7 @@
 
 ### Démarrage
 ***
->**Le programe se compile avec la commande Make. L'éxécutable est alors lancés avec "./echecs" . Il y a une erreur de segmentation qui empêche le bon déroulement de se projet mais les fonctionnalités marchent.** 
+>**Le programe se compile avec la commande Make. L'éxécutable est alors lancés avec "./echecs" . Il y a une erreur de segmentation que je n'arrive pas à résoudre qui empêche le bon déroulement de se projet mais les fonctionnalités marchent.** 
 
 ### Doxygen
 ***
