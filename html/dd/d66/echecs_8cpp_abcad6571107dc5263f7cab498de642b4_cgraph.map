@@ -1,0 +1,6 @@
+<map id="right_input" name="right_input">
+<area shape="rect" id="node1" title="On vérifie si la commande rentrée est correcte et renvoie le numéro du déplacement." alt="" coords="5,56,97,83"/>
+<area shape="rect" id="node2" href="$dd/d66/echecs_8cpp.html#ade76fd8a6f9734fa7c70e7f747be9b96" title="On vérifie si la commande rentrée est correcte." alt="" coords="186,5,293,32"/>
+<area shape="rect" id="node3" href="$dd/d66/echecs_8cpp.html#aa5e90a5746399f1195222da5d30211fc" title="On vérifie si la commande rentrée est correcte pour le grand roque." alt="" coords="145,56,333,83"/>
+<area shape="rect" id="node4" href="$dd/d66/echecs_8cpp.html#a84bd4be358b9e5d72bb6b14890527a2d" title="On vérifie si la commande rentrée est correcte pour le petit roque." alt="" coords="149,107,330,133"/>
+</map>

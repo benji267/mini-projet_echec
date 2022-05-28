@@ -1,0 +1,9 @@
+<map id="piece.h" name="piece.h">
+<area shape="rect" id="node1" title=" " alt="" coords="152,5,221,32"/>
+<area shape="rect" id="node2" href="$df/d3e/chessboard_8h.html" title=" " alt="" coords="73,80,181,107"/>
+<area shape="rect" id="node7" href="$dd/d2d/piece_8cpp.html" title=" " alt="" coords="205,80,289,107"/>
+<area shape="rect" id="node3" href="$d3/d03/chessboard_8cpp.html" title=" " alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node4" href="$d2/dd5/game_8h.html" title=" " alt="" coords="153,155,223,181"/>
+<area shape="rect" id="node5" href="$dd/d66/echecs_8cpp.html" title=" " alt="" coords="83,229,178,256"/>
+<area shape="rect" id="node6" href="$df/dd9/game_8cpp.html" title=" " alt="" coords="202,229,289,256"/>
+</map>

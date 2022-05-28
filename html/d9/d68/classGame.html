@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>cette classe a pour vocation d'interagir avec l'utilisateur. Elle gère la gestion des coups et l'affichage de l'échiquier  
+<p>cette classe a pour vocation d'interagir avec l'utilisateur.  
  <a href="../../d9/d68/classGame.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/dd5/game_8h_source.html">game.h</a>&gt;</code></p>
@@ -80,6 +80,18 @@ $(function() {
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../de/da7/classGame__coll__graph.png" border="0" usemap="#Game_coll__map" alt="Collaboration graph"/></div>
+<map name="Game_coll__map" id="Game_coll__map">
+<area shape="rect" title="cette classe a pour vocation d&#39;interagir avec l&#39;utilisateur." alt="" coords="219,932,366,1141"/>
+<area shape="rect" href="../../df/d81/classChessboard.html" title="Cette classe a pour vocation de manipuler l&#39;échiquier. Elle a pour rôle de l&#39;initialiser et de mainte..." alt="" coords="214,675,371,869"/>
+<area shape="rect" href="../../d5/df0/classPiece.html" title="Cette classe va gérer les différentes pièces présentes sur l&#39;échiquier et leurs couleurs à chacunes." alt="" coords="201,388,384,597"/>
+<area shape="rect" title=" " alt="" coords="5,211,92,289"/>
+<area shape="rect" title=" " alt="" coords="131,211,182,289"/>
+<area shape="rect" title="STL class." alt="" coords="233,211,320,289"/>
+<area shape="rect" title="STL class." alt="" coords="207,5,346,97"/>
+<area shape="rect" href="../../d3/d72/classSquare.html" title="Cette classe a pour vocation de représenter l&#39;état et la position d&#39;une pièce." alt="" coords="345,175,505,325"/>
+<area shape="rect" title=" " alt="" coords="405,13,444,90"/>
+<area shape="rect" title=" " alt="" coords="542,211,598,289"/>
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -102,10 +114,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abcdda5e3d466a365c84fefaf27a30ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">change la valeur de roque_en_cours  <a href="../../d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece">More...</a><br /></td></tr>
 <tr class="separator:abcdda5e3d466a365c84fefaf27a30ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8db1fa47863a7a67ecb06327474d9612"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612">moove</a> (<a class="el" href="../../d3/d72/classSquare.html">Square</a> position, <a class="el" href="../../d3/d72/classSquare.html">Square</a> location, int mvmt)</td></tr>
-<tr class="memdesc:a8db1fa47863a7a67ecb06327474d9612"><td class="mdescLeft">&#160;</td><td class="mdescRight">gestion du déplacement suite à la saisie du coup doit faire appel aux méthodes de vérification de validité du coup.  <a href="../../d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612">More...</a><br /></td></tr>
+<tr class="memdesc:a8db1fa47863a7a67ecb06327474d9612"><td class="mdescLeft">&#160;</td><td class="mdescRight">gestion du déplacement suite à la saisie du coup  <a href="../../d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612">More...</a><br /></td></tr>
 <tr class="separator:a8db1fa47863a7a67ecb06327474d9612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9835abc8805f0185697fe1b8beb609f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d68/classGame.html#a9835abc8805f0185697fe1b8beb609f3">Check_Pawn</a> (<a class="el" href="../../d3/d72/classSquare.html">Square</a> position, <a class="el" href="../../d3/d72/classSquare.html">Square</a> location, int mvmt)</td></tr>
-<tr class="memdesc:a9835abc8805f0185697fe1b8beb609f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">s'occupe des vérifications spécifiques aux pions comme la prise, la prise en passant, ou encore l'obstruction par une pièce devant le pion  <a href="../../d9/d68/classGame.html#a9835abc8805f0185697fe1b8beb609f3">More...</a><br /></td></tr>
+<tr class="memdesc:a9835abc8805f0185697fe1b8beb609f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">s'occupe des vérifications spécifiques aux pions comme la prise, la prise en passant etc.  <a href="../../d9/d68/classGame.html#a9835abc8805f0185697fe1b8beb609f3">More...</a><br /></td></tr>
 <tr class="separator:a9835abc8805f0185697fe1b8beb609f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5ae5c0ea00796532383def9ef8ed5c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d68/classGame.html#aa5ae5c0ea00796532383def9ef8ed5c6">hurdle</a> (<a class="el" href="../../d5/df0/classPiece.html">Piece</a> *piece, <a class="el" href="../../d3/d72/classSquare.html">Square</a> position, <a class="el" href="../../d3/d72/classSquare.html">Square</a> location)</td></tr>
 <tr class="memdesc:aa5ae5c0ea00796532383def9ef8ed5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">vérifie que la pièce ne passe pas au-dessus d'une autre lors de son déplacement. On distingue trois déplacements particuliers:  <a href="../../d9/d68/classGame.html#aa5ae5c0ea00796532383def9ef8ed5c6">More...</a><br /></td></tr>
@@ -126,11 +138,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:ab720cc3c023082620d294653ed8dcd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">non utilisé, prévu pour la prise en passant  <a href="../../d9/d68/classGame.html#ab720cc3c023082620d294653ed8dcd4d">More...</a><br /></td></tr>
 <tr class="separator:ab720cc3c023082620d294653ed8dcd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac856c1159092c3279c8143478e4c2669"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d68/classGame.html#ac856c1159092c3279c8143478e4c2669">roque_en_cours</a></td></tr>
-<tr class="memdesc:ac856c1159092c3279c8143478e4c2669"><td class="mdescLeft">&#160;</td><td class="mdescRight">flag lors du roque  <a href="../../d9/d68/classGame.html#ac856c1159092c3279c8143478e4c2669">More...</a><br /></td></tr>
 <tr class="separator:ac856c1159092c3279c8143478e4c2669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>cette classe a pour vocation d'interagir avec l'utilisateur. Elle gère la gestion des coups et l'affichage de l'échiquier </p>
+<div class="textblock"><p>cette classe a pour vocation d'interagir avec l'utilisateur. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad59df6562a58a614fda24622d3715b65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad59df6562a58a614fda24622d3715b65">&#9670;&nbsp;</a></span>Game()</h2>
@@ -194,6 +205,11 @@ Protected Attributes</h2></td></tr>
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_a0d421bbb8ab615c9d7a3b13ffcda161f_cgraph.png" border="0" usemap="#d9/d68/classGame_a0d421bbb8ab615c9d7a3b13ffcda161f_cgraph" alt=""/></div>
+<map name="d9/d68/classGame_a0d421bbb8ab615c9d7a3b13ffcda161f_cgraph" id="d9/d68/classGame_a0d421bbb8ab615c9d7a3b13ffcda161f_cgraph">
+<area shape="rect" title="affiche l&#39;échiquier grâce à la méthode affiche() de la classe Echiquier affiche la couleur devant jou..." alt="" coords="5,31,119,57"/>
+<area shape="rect" href="../../d9/d68/classGame.html#ae9540336405edcbbbcb599aeae01fea0" title=" " alt="" coords="167,5,335,32"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#aff092748eafdb201da03c247a0aa064a" title="affiche l&#39;échiquier dans le terminal" alt="" coords="181,56,321,83"/>
+</map>
 </div>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -201,6 +217,10 @@ Protected Attributes</h2></td></tr>
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_a0d421bbb8ab615c9d7a3b13ffcda161f_icgraph.png" border="0" usemap="#d9/d68/classGame_a0d421bbb8ab615c9d7a3b13ffcda161f_icgraph" alt=""/></div>
+<map name="d9/d68/classGame_a0d421bbb8ab615c9d7a3b13ffcda161f_icgraph" id="d9/d68/classGame_a0d421bbb8ab615c9d7a3b13ffcda161f_icgraph">
+<area shape="rect" title="affiche l&#39;échiquier grâce à la méthode affiche() de la classe Echiquier affiche la couleur devant jou..." alt="" coords="108,5,221,32"/>
+<area shape="rect" href="../../dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
 </div>
 
 </div>
@@ -227,6 +247,11 @@ Protected Attributes</h2></td></tr>
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_ae9540336405edcbbbcb599aeae01fea0_icgraph.png" border="0" usemap="#d9/d68/classGame_ae9540336405edcbbbcb599aeae01fea0_icgraph" alt=""/></div>
+<map name="d9/d68/classGame_ae9540336405edcbbbcb599aeae01fea0_icgraph" id="d9/d68/classGame_ae9540336405edcbbbcb599aeae01fea0_icgraph">
+<area shape="rect" title=" " alt="" coords="269,5,437,32"/>
+<area shape="rect" href="../../d9/d68/classGame.html#a0d421bbb8ab615c9d7a3b13ffcda161f" title="affiche l&#39;échiquier grâce à la méthode affiche() de la classe Echiquier affiche la couleur devant jou..." alt="" coords="108,5,221,32"/>
+<area shape="rect" href="../../dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
 </div>
 
 </div>
@@ -253,6 +278,15 @@ Protected Attributes</h2></td></tr>
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_a088203d7f976366b73c038e0db0ae55a_cgraph.png" border="0" usemap="#d9/d68/classGame_a088203d7f976366b73c038e0db0ae55a_cgraph" alt=""/></div>
+<map name="d9/d68/classGame_a088203d7f976366b73c038e0db0ae55a_cgraph" id="d9/d68/classGame_a088203d7f976366b73c038e0db0ae55a_cgraph">
+<area shape="rect" title="s&#39;occupe de l&#39;affichage final au format pgn" alt="" coords="5,56,149,83"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a964d18040457b83fad3cb3a1a9a3a16f" title="la position finale du jeu sous une forme canonique, on récupère le contenu de chaque case en parcouta..." alt="" coords="197,56,391,83"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a919c8fa5906e0aaf902cd35a71c670e5" title="vérifie que l&#39;on reste dans les dimensions de l&#39;échiquier" alt="" coords="703,31,872,57"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a1c28aa76c3eae36503efa734abc8d3f1" title="indique le statut de la case (libre/occupée)." alt="" coords="447,56,647,83"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a3141ee4be79553894e7a79885ff80f75" title="est utilisée par final_position() pour renvoyer le symbole utilisé dans la notation pgn." alt="" coords="439,107,655,133"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#ae75d936ad361d2ff001b289f1d914ab8" title="fonction qui renvoie la colonne où se trouve la pièce" alt="" coords="920,5,1069,32"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#a4fa5008593aaff1c8ffc038541e4586c" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="929,56,1060,83"/>
+</map>
 </div>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -260,6 +294,10 @@ Protected Attributes</h2></td></tr>
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_a088203d7f976366b73c038e0db0ae55a_icgraph.png" border="0" usemap="#d9/d68/classGame_a088203d7f976366b73c038e0db0ae55a_icgraph" alt=""/></div>
+<map name="d9/d68/classGame_a088203d7f976366b73c038e0db0ae55a_icgraph" id="d9/d68/classGame_a088203d7f976366b73c038e0db0ae55a_icgraph">
+<area shape="rect" title="s&#39;occupe de l&#39;affichage final au format pgn" alt="" coords="108,5,252,32"/>
+<area shape="rect" href="../../dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
 </div>
 
 </div>
@@ -296,7 +334,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>s'occupe des vérifications spécifiques aux pions comme la prise, la prise en passant, ou encore l'obstruction par une pièce devant le pion </p>
+<p>s'occupe des vérifications spécifiques aux pions comme la prise, la prise en passant etc. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td></td></tr>
@@ -314,6 +352,13 @@ false </dd></dl>
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_a9835abc8805f0185697fe1b8beb609f3_cgraph.png" border="0" usemap="#d9/d68/classGame_a9835abc8805f0185697fe1b8beb609f3_cgraph" alt=""/></div>
+<map name="d9/d68/classGame_a9835abc8805f0185697fe1b8beb609f3_cgraph" id="d9/d68/classGame_a9835abc8805f0185697fe1b8beb609f3_cgraph">
+<area shape="rect" title="s&#39;occupe des vérifications spécifiques aux pions comme la prise, la prise en passant etc." alt="" coords="5,43,156,69"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#ae75d936ad361d2ff001b289f1d914ab8" title="fonction qui renvoie la colonne où se trouve la pièce" alt="" coords="669,5,819,32"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#a4fa5008593aaff1c8ffc038541e4586c" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="679,68,809,95"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a1c28aa76c3eae36503efa734abc8d3f1" title="indique le statut de la case (libre/occupée)." alt="" coords="204,43,404,69"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a919c8fa5906e0aaf902cd35a71c670e5" title="vérifie que l&#39;on reste dans les dimensions de l&#39;échiquier" alt="" coords="452,43,621,69"/>
+</map>
 </div>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -321,6 +366,13 @@ false </dd></dl>
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_a9835abc8805f0185697fe1b8beb609f3_icgraph.png" border="0" usemap="#d9/d68/classGame_a9835abc8805f0185697fe1b8beb609f3_icgraph" alt=""/></div>
+<map name="d9/d68/classGame_a9835abc8805f0185697fe1b8beb609f3_icgraph" id="d9/d68/classGame_a9835abc8805f0185697fe1b8beb609f3_icgraph">
+<area shape="rect" title="s&#39;occupe des vérifications spécifiques aux pions comme la prise, la prise en passant etc." alt="" coords="504,31,655,57"/>
+<area shape="rect" href="../../d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612" title="gestion du déplacement suite à la saisie du coup" alt="" coords="341,31,456,57"/>
+<area shape="rect" href="../../dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="45,5,99,32"/>
+<area shape="rect" href="../../d9/d68/classGame.html#ac6bf6130a938fc687f418e77d5c9aa95" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="187,56,293,83"/>
+<area shape="rect" href="../../d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece" title="change la valeur de roque_en_cours" alt="" coords="5,56,139,83"/>
+</map>
 </div>
 
 </div>
@@ -378,6 +430,14 @@ false </dd></dl>
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_aa5ae5c0ea00796532383def9ef8ed5c6_cgraph.png" border="0" usemap="#d9/d68/classGame_aa5ae5c0ea00796532383def9ef8ed5c6_cgraph" alt=""/></div>
+<map name="d9/d68/classGame_aa5ae5c0ea00796532383def9ef8ed5c6_cgraph" id="d9/d68/classGame_aa5ae5c0ea00796532383def9ef8ed5c6_cgraph">
+<area shape="rect" title="vérifie que la pièce ne passe pas au&#45;dessus d&#39;une autre lors de son déplacement. On distingue trois d..." alt="" coords="5,81,116,108"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#a622d60ffe801afa5d6dc2a9404e13c84" title="renvoie le nom de la pièce" alt="" coords="177,5,351,32"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#ae75d936ad361d2ff001b289f1d914ab8" title="fonction qui renvoie la colonne où se trouve la pièce" alt="" coords="629,69,779,96"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#a4fa5008593aaff1c8ffc038541e4586c" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="639,132,769,159"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a1c28aa76c3eae36503efa734abc8d3f1" title="indique le statut de la case (libre/occupée)." alt="" coords="164,107,364,133"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a919c8fa5906e0aaf902cd35a71c670e5" title="vérifie que l&#39;on reste dans les dimensions de l&#39;échiquier" alt="" coords="412,107,581,133"/>
+</map>
 </div>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -385,6 +445,13 @@ false </dd></dl>
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_aa5ae5c0ea00796532383def9ef8ed5c6_icgraph.png" border="0" usemap="#d9/d68/classGame_aa5ae5c0ea00796532383def9ef8ed5c6_icgraph" alt=""/></div>
+<map name="d9/d68/classGame_aa5ae5c0ea00796532383def9ef8ed5c6_icgraph" id="d9/d68/classGame_aa5ae5c0ea00796532383def9ef8ed5c6_icgraph">
+<area shape="rect" title="vérifie que la pièce ne passe pas au&#45;dessus d&#39;une autre lors de son déplacement. On distingue trois d..." alt="" coords="504,31,615,57"/>
+<area shape="rect" href="../../d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612" title="gestion du déplacement suite à la saisie du coup" alt="" coords="341,31,456,57"/>
+<area shape="rect" href="../../dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="45,5,99,32"/>
+<area shape="rect" href="../../d9/d68/classGame.html#ac6bf6130a938fc687f418e77d5c9aa95" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="187,56,293,83"/>
+<area shape="rect" href="../../d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece" title="change la valeur de roque_en_cours" alt="" coords="5,56,139,83"/>
+</map>
 </div>
 
 </div>
@@ -421,7 +488,7 @@ false </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>gestion du déplacement suite à la saisie du coup doit faire appel aux méthodes de vérification de validité du coup. </p>
+<p>gestion du déplacement suite à la saisie du coup </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>la case de départ de la pièce </td></tr>
@@ -437,6 +504,21 @@ false </dd></dl>
 </div>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_a8db1fa47863a7a67ecb06327474d9612_cgraph.png" border="0" usemap="#d9/d68/classGame_a8db1fa47863a7a67ecb06327474d9612_cgraph" alt=""/></div>
+<map name="d9/d68/classGame_a8db1fa47863a7a67ecb06327474d9612_cgraph" id="d9/d68/classGame_a8db1fa47863a7a67ecb06327474d9612_cgraph">
+<area shape="rect" title="gestion du déplacement suite à la saisie du coup" alt="" coords="5,228,120,255"/>
+<area shape="rect" href="../../d9/d68/classGame.html#a9835abc8805f0185697fe1b8beb609f3" title="s&#39;occupe des vérifications spécifiques aux pions comme la prise, la prise en passant etc." alt="" coords="174,447,325,473"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a1c28aa76c3eae36503efa734abc8d3f1" title="indique le statut de la case (libre/occupée)." alt="" coords="379,388,579,415"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a919c8fa5906e0aaf902cd35a71c670e5" title="vérifie que l&#39;on reste dans les dimensions de l&#39;échiquier" alt="" coords="627,279,796,305"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#a43c3f26ef40bed56c375fd3490c659d8" title="renvoie la couleur de la pièce" alt="" coords="648,9,775,36"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#a4adcf2e30cdd2e973bc0704f8eb7b647" title="renvoie le type de pièce" alt="" coords="192,228,307,255"/>
+<area shape="rect" href="../../d9/d68/classGame.html#aa5ae5c0ea00796532383def9ef8ed5c6" title="vérifie que la pièce ne passe pas au&#45;dessus d&#39;une autre lors de son déplacement. On distingue trois d..." alt="" coords="194,279,305,305"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#ab2b303d5f0ff13899c0e662f70f96d2b" title="vérifie si le déplacement est possible" alt="" coords="168,330,331,371"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a1b5dfe224dabc92ed01ed11667ba61a2" title="pose une pièce à la case spécifiée La pose est possile si la case est vide ou si elle contient une pi..." alt="" coords="394,76,563,103"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#aedb59c02419b9dfc6527346fdf9d7acb" title="place un pointeur nul sur la case origine" alt="" coords="633,162,789,203"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#ae75d936ad361d2ff001b289f1d914ab8" title="fonction qui renvoie la colonne où se trouve la pièce" alt="" coords="844,228,993,255"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#a4fa5008593aaff1c8ffc038541e4586c" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="853,279,984,305"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#a622d60ffe801afa5d6dc2a9404e13c84" title="renvoie le nom de la pièce" alt="" coords="391,337,566,364"/>
+</map>
 </div>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -444,6 +526,12 @@ false </dd></dl>
 </div>
 <div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_a8db1fa47863a7a67ecb06327474d9612_icgraph.png" border="0" usemap="#d9/d68/classGame_a8db1fa47863a7a67ecb06327474d9612_icgraph" alt=""/></div>
+<map name="d9/d68/classGame_a8db1fa47863a7a67ecb06327474d9612_icgraph" id="d9/d68/classGame_a8db1fa47863a7a67ecb06327474d9612_icgraph">
+<area shape="rect" title="gestion du déplacement suite à la saisie du coup" alt="" coords="341,31,456,57"/>
+<area shape="rect" href="../../dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="45,5,99,32"/>
+<area shape="rect" href="../../d9/d68/classGame.html#ac6bf6130a938fc687f418e77d5c9aa95" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="187,56,293,83"/>
+<area shape="rect" href="../../d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece" title="change la valeur de roque_en_cours" alt="" coords="5,56,139,83"/>
+</map>
 </div>
 
 </div>
@@ -477,6 +565,23 @@ false </dd></dl>
 </div>
 <div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_ac6bf6130a938fc687f418e77d5c9aa95_cgraph.png" border="0" usemap="#d9/d68/classGame_ac6bf6130a938fc687f418e77d5c9aa95_cgraph" alt=""/></div>
+<map name="d9/d68/classGame_ac6bf6130a938fc687f418e77d5c9aa95_cgraph" id="d9/d68/classGame_ac6bf6130a938fc687f418e77d5c9aa95_cgraph">
+<area shape="rect" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="5,277,112,304"/>
+<area shape="rect" href="../../d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612" title="gestion du déplacement suite à la saisie du coup" alt="" coords="169,226,284,253"/>
+<area shape="rect" href="../../d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece" title="change la valeur de roque_en_cours" alt="" coords="160,277,293,304"/>
+<area shape="rect" href="../../d9/d68/classGame.html#a9835abc8805f0185697fe1b8beb609f3" title="s&#39;occupe des vérifications spécifiques aux pions comme la prise, la prise en passant etc." alt="" coords="347,445,498,472"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a1c28aa76c3eae36503efa734abc8d3f1" title="indique le statut de la case (libre/occupée)." alt="" coords="552,386,752,413"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a919c8fa5906e0aaf902cd35a71c670e5" title="vérifie que l&#39;on reste dans les dimensions de l&#39;échiquier" alt="" coords="800,277,969,304"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#a43c3f26ef40bed56c375fd3490c659d8" title="renvoie la couleur de la pièce" alt="" coords="821,8,948,34"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#a4adcf2e30cdd2e973bc0704f8eb7b647" title="renvoie le type de pièce" alt="" coords="365,226,480,253"/>
+<area shape="rect" href="../../d9/d68/classGame.html#aa5ae5c0ea00796532383def9ef8ed5c6" title="vérifie que la pièce ne passe pas au&#45;dessus d&#39;une autre lors de son déplacement. On distingue trois d..." alt="" coords="367,277,478,304"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#ab2b303d5f0ff13899c0e662f70f96d2b" title="vérifie si le déplacement est possible" alt="" coords="341,328,504,370"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a1b5dfe224dabc92ed01ed11667ba61a2" title="pose une pièce à la case spécifiée La pose est possile si la case est vide ou si elle contient une pi..." alt="" coords="567,74,737,101"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#aedb59c02419b9dfc6527346fdf9d7acb" title="place un pointeur nul sur la case origine" alt="" coords="807,160,963,202"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#ae75d936ad361d2ff001b289f1d914ab8" title="fonction qui renvoie la colonne où se trouve la pièce" alt="" coords="1017,226,1167,253"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#a4fa5008593aaff1c8ffc038541e4586c" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="1027,277,1157,304"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#a622d60ffe801afa5d6dc2a9404e13c84" title="renvoie le nom de la pièce" alt="" coords="565,336,739,362"/>
+</map>
 </div>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -484,6 +589,11 @@ false </dd></dl>
 </div>
 <div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_ac6bf6130a938fc687f418e77d5c9aa95_icgraph.png" border="0" usemap="#d9/d68/classGame_ac6bf6130a938fc687f418e77d5c9aa95_icgraph" alt=""/></div>
+<map name="d9/d68/classGame_ac6bf6130a938fc687f418e77d5c9aa95_icgraph" id="d9/d68/classGame_ac6bf6130a938fc687f418e77d5c9aa95_icgraph">
+<area shape="rect" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="187,56,293,83"/>
+<area shape="rect" href="../../dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="45,5,99,32"/>
+<area shape="rect" href="../../d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece" title="change la valeur de roque_en_cours" alt="" coords="5,56,139,83"/>
+</map>
 </div>
 
 </div>
@@ -511,6 +621,23 @@ false </dd></dl>
 </div>
 <div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_abcdda5e3d466a365c84fefaf27a30ece_cgraph.png" border="0" usemap="#d9/d68/classGame_abcdda5e3d466a365c84fefaf27a30ece_cgraph" alt=""/></div>
+<map name="d9/d68/classGame_abcdda5e3d466a365c84fefaf27a30ece_cgraph" id="d9/d68/classGame_abcdda5e3d466a365c84fefaf27a30ece_cgraph">
+<area shape="rect" title="change la valeur de roque_en_cours" alt="" coords="5,228,139,255"/>
+<area shape="rect" href="../../d9/d68/classGame.html#ac6bf6130a938fc687f418e77d5c9aa95" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="187,228,293,255"/>
+<area shape="rect" href="../../d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612" title="gestion du déplacement suite à la saisie du coup" alt="" coords="341,228,456,255"/>
+<area shape="rect" href="../../d9/d68/classGame.html#a9835abc8805f0185697fe1b8beb609f3" title="s&#39;occupe des vérifications spécifiques aux pions comme la prise, la prise en passant etc." alt="" coords="510,447,661,473"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a1c28aa76c3eae36503efa734abc8d3f1" title="indique le statut de la case (libre/occupée)." alt="" coords="715,388,915,415"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a919c8fa5906e0aaf902cd35a71c670e5" title="vérifie que l&#39;on reste dans les dimensions de l&#39;échiquier" alt="" coords="963,279,1132,305"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#a43c3f26ef40bed56c375fd3490c659d8" title="renvoie la couleur de la pièce" alt="" coords="984,9,1111,36"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#a4adcf2e30cdd2e973bc0704f8eb7b647" title="renvoie le type de pièce" alt="" coords="528,228,643,255"/>
+<area shape="rect" href="../../d9/d68/classGame.html#aa5ae5c0ea00796532383def9ef8ed5c6" title="vérifie que la pièce ne passe pas au&#45;dessus d&#39;une autre lors de son déplacement. On distingue trois d..." alt="" coords="530,279,641,305"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#ab2b303d5f0ff13899c0e662f70f96d2b" title="vérifie si le déplacement est possible" alt="" coords="504,330,667,371"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#a1b5dfe224dabc92ed01ed11667ba61a2" title="pose une pièce à la case spécifiée La pose est possile si la case est vide ou si elle contient une pi..." alt="" coords="730,76,899,103"/>
+<area shape="rect" href="../../df/d81/classChessboard.html#aedb59c02419b9dfc6527346fdf9d7acb" title="place un pointeur nul sur la case origine" alt="" coords="969,162,1125,203"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#ae75d936ad361d2ff001b289f1d914ab8" title="fonction qui renvoie la colonne où se trouve la pièce" alt="" coords="1180,228,1329,255"/>
+<area shape="rect" href="../../d3/d72/classSquare.html#a4fa5008593aaff1c8ffc038541e4586c" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="1189,279,1320,305"/>
+<area shape="rect" href="../../d5/df0/classPiece.html#a622d60ffe801afa5d6dc2a9404e13c84" title="renvoie le nom de la pièce" alt="" coords="727,337,902,364"/>
+</map>
 </div>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -518,6 +645,11 @@ false </dd></dl>
 </div>
 <div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="../../d9/d68/classGame_abcdda5e3d466a365c84fefaf27a30ece_icgraph.png" border="0" usemap="#d9/d68/classGame_abcdda5e3d466a365c84fefaf27a30ece_icgraph" alt=""/></div>
+<map name="d9/d68/classGame_abcdda5e3d466a365c84fefaf27a30ece_icgraph" id="d9/d68/classGame_abcdda5e3d466a365c84fefaf27a30ece_icgraph">
+<area shape="rect" title="change la valeur de roque_en_cours" alt="" coords="263,5,396,32"/>
+<area shape="rect" href="../../d9/d68/classGame.html#ac6bf6130a938fc687f418e77d5c9aa95" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="108,5,215,32"/>
+<area shape="rect" href="../../dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
 </div>
 
 </div>
@@ -614,8 +746,6 @@ false </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>flag lors du roque </p>
 
 </div>
 </div>

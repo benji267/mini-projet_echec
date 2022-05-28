@@ -1,0 +1,9 @@
+<map id="Piece::get_Color" name="Piece::get_Color">
+<area shape="rect" id="node1" title="renvoie la couleur de la pièce" alt="" coords="721,71,848,98"/>
+<area shape="rect" id="node2" href="$de/dff/classPawn.html#af678477e0d92c4f70fc7a10af73710fa" title="cette fonction permet de voir si le mouvement demandé par l&#39;utilisateur est légale et autorisé pour u..." alt="" coords="508,5,669,47"/>
+<area shape="rect" id="node3" href="$d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612" title="gestion du déplacement suite à la saisie du coup" alt="" coords="341,97,456,123"/>
+<area shape="rect" id="node7" href="$df/d81/classChessboard.html#a1b5dfe224dabc92ed01ed11667ba61a2" title="pose une pièce à la case spécifiée La pose est possile si la case est vide ou si elle contient une pi..." alt="" coords="504,122,673,149"/>
+<area shape="rect" id="node4" href="$dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="45,71,99,98"/>
+<area shape="rect" id="node5" href="$d9/d68/classGame.html#ac6bf6130a938fc687f418e77d5c9aa95" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="187,122,293,149"/>
+<area shape="rect" id="node6" href="$d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece" title="change la valeur de roque_en_cours" alt="" coords="5,122,139,149"/>
+</map>

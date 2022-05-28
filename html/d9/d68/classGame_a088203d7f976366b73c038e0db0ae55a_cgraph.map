@@ -1,0 +1,9 @@
+<map id="Game::affiche_pgn" name="Game::affiche_pgn">
+<area shape="rect" id="node1" title="s&#39;occupe de l&#39;affichage final au format pgn" alt="" coords="5,56,149,83"/>
+<area shape="rect" id="node2" href="$df/d81/classChessboard.html#a964d18040457b83fad3cb3a1a9a3a16f" title="la position finale du jeu sous une forme canonique, on récupère le contenu de chaque case en parcouta..." alt="" coords="197,56,391,83"/>
+<area shape="rect" id="node3" href="$df/d81/classChessboard.html#a919c8fa5906e0aaf902cd35a71c670e5" title="vérifie que l&#39;on reste dans les dimensions de l&#39;échiquier" alt="" coords="703,31,872,57"/>
+<area shape="rect" id="node6" href="$df/d81/classChessboard.html#a1c28aa76c3eae36503efa734abc8d3f1" title="indique le statut de la case (libre/occupée)." alt="" coords="447,56,647,83"/>
+<area shape="rect" id="node7" href="$df/d81/classChessboard.html#a3141ee4be79553894e7a79885ff80f75" title="est utilisée par final_position() pour renvoyer le symbole utilisé dans la notation pgn." alt="" coords="439,107,655,133"/>
+<area shape="rect" id="node4" href="$d3/d72/classSquare.html#ae75d936ad361d2ff001b289f1d914ab8" title="fonction qui renvoie la colonne où se trouve la pièce" alt="" coords="920,5,1069,32"/>
+<area shape="rect" id="node5" href="$d3/d72/classSquare.html#a4fa5008593aaff1c8ffc038541e4586c" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="929,56,1060,83"/>
+</map>

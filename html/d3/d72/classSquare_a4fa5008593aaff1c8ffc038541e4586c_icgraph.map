@@ -1,0 +1,22 @@
+<map id="Square::getLigne" name="Square::getLigne">
+<area shape="rect" id="node1" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="1267,418,1397,445"/>
+<area shape="rect" id="node2" href="$d9/d68/classGame.html#a9835abc8805f0185697fe1b8beb609f3" title="s&#39;occupe des vérifications spécifiques aux pions comme la prise, la prise en passant etc." alt="" coords="563,158,713,185"/>
+<area shape="rect" id="node7" href="$df/d81/classChessboard.html#a919c8fa5906e0aaf902cd35a71c670e5" title="vérifie que l&#39;on reste dans les dimensions de l&#39;échiquier" alt="" coords="1040,82,1209,109"/>
+<area shape="rect" id="node11" href="$d9/d68/classGame.html#aa5ae5c0ea00796532383def9ef8ed5c6" title="vérifie que la pièce ne passe pas au&#45;dessus d&#39;une autre lors de son déplacement. On distingue trois d..." alt="" coords="583,209,693,235"/>
+<area shape="rect" id="node12" href="$de/dfb/classBishop.html#a9c80bce0f44af7ec7a3cc4fbf668274c" title="cette fonction permet de voir si le mouvement demandé par l&#39;utilisateur est légale et autorisé pour u..." alt="" coords="1039,377,1210,419"/>
+<area shape="rect" id="node13" href="$d1/db5/classKing.html#aa28e7a0fdb37926c90ad13138f2c3e62" title="cette fonction permet de voir si le mouvement demandé par l&#39;utilisateur est légale et autorisé pour u..." alt="" coords="1047,443,1203,484"/>
+<area shape="rect" id="node14" href="$d5/d23/classKnight.html#ae4df0bd7f4652776a9444221967f0b80" title="cette fonction permet de voir si le mouvement demandé par l&#39;utilisateur est légale et autorisé pour u..." alt="" coords="1040,508,1209,549"/>
+<area shape="rect" id="node15" href="$de/dff/classPawn.html#af678477e0d92c4f70fc7a10af73710fa" title="cette fonction permet de voir si le mouvement demandé par l&#39;utilisateur est légale et autorisé pour u..." alt="" coords="1044,573,1205,615"/>
+<area shape="rect" id="node16" href="$d5/d3f/classQueen.html#a25cbc74a3a45cb808cf7dc54cd50e2fb" title="cette fonction permet de voir si le mouvement demandé par l&#39;utilisateur est légale et autorisé pour u..." alt="" coords="1040,639,1209,680"/>
+<area shape="rect" id="node17" href="$db/d7e/classRook.html#a5b9d248e45ee436696fe14f537700eb6" title="cette fonction permet de voir si le mouvement demandé par l&#39;utilisateur est légale et autorisé pour u..." alt="" coords="1045,704,1205,745"/>
+<area shape="rect" id="node18" href="$df/d81/classChessboard.html#a1b5dfe224dabc92ed01ed11667ba61a2" title="pose une pièce à la case spécifiée La pose est possile si la case est vide ou si elle contient une pi..." alt="" coords="798,310,967,337"/>
+<area shape="rect" id="node19" href="$df/d81/classChessboard.html#aedb59c02419b9dfc6527346fdf9d7acb" title="place un pointeur nul sur la case origine" alt="" coords="1047,260,1203,301"/>
+<area shape="rect" id="node20" href="$d3/d72/classSquare.html#a59536943a9f565bfe864ed7171973a55" title="fonction qui affiche la position de la pièce" alt="" coords="1031,770,1219,797"/>
+<area shape="rect" id="node3" href="$d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612" title="gestion du déplacement suite à la saisie du coup" alt="" coords="379,158,493,185"/>
+<area shape="rect" id="node4" href="$dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="45,107,99,134"/>
+<area shape="rect" id="node5" href="$d9/d68/classGame.html#ac6bf6130a938fc687f418e77d5c9aa95" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="205,158,312,185"/>
+<area shape="rect" id="node6" href="$d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece" title="change la valeur de roque_en_cours" alt="" coords="5,158,139,185"/>
+<area shape="rect" id="node8" href="$df/d81/classChessboard.html#a964d18040457b83fad3cb3a1a9a3a16f" title="la position finale du jeu sous une forme canonique, on récupère le contenu de chaque case en parcouta..." alt="" coords="541,57,735,83"/>
+<area shape="rect" id="node10" href="$df/d81/classChessboard.html#a1c28aa76c3eae36503efa734abc8d3f1" title="indique le statut de la case (libre/occupée)." alt="" coords="783,107,983,134"/>
+<area shape="rect" id="node9" href="$d9/d68/classGame.html#a088203d7f976366b73c038e0db0ae55a" title="s&#39;occupe de l&#39;affichage final au format pgn" alt="" coords="187,57,331,83"/>
+</map>

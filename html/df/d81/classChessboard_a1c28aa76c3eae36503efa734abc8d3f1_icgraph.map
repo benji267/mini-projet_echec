@@ -1,0 +1,11 @@
+<map id="Chessboard::is_empty_bloc" name="Chessboard::is_empty_bloc">
+<area shape="rect" id="node1" title="indique le statut de la case (libre/occupée)." alt="" coords="783,81,983,108"/>
+<area shape="rect" id="node2" href="$d9/d68/classGame.html#a9835abc8805f0185697fe1b8beb609f3" title="s&#39;occupe des vérifications spécifiques aux pions comme la prise, la prise en passant etc." alt="" coords="563,5,713,32"/>
+<area shape="rect" id="node3" href="$d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612" title="gestion du déplacement suite à la saisie du coup" alt="" coords="379,56,493,83"/>
+<area shape="rect" id="node7" href="$df/d81/classChessboard.html#a964d18040457b83fad3cb3a1a9a3a16f" title="la position finale du jeu sous une forme canonique, on récupère le contenu de chaque case en parcouta..." alt="" coords="541,157,735,184"/>
+<area shape="rect" id="node9" href="$d9/d68/classGame.html#aa5ae5c0ea00796532383def9ef8ed5c6" title="vérifie que la pièce ne passe pas au&#45;dessus d&#39;une autre lors de son déplacement. On distingue trois d..." alt="" coords="583,107,693,133"/>
+<area shape="rect" id="node4" href="$dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="45,107,99,133"/>
+<area shape="rect" id="node5" href="$d9/d68/classGame.html#ac6bf6130a938fc687f418e77d5c9aa95" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="205,56,312,83"/>
+<area shape="rect" id="node6" href="$d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece" title="change la valeur de roque_en_cours" alt="" coords="5,56,139,83"/>
+<area shape="rect" id="node8" href="$d9/d68/classGame.html#a088203d7f976366b73c038e0db0ae55a" title="s&#39;occupe de l&#39;affichage final au format pgn" alt="" coords="187,157,331,184"/>
+</map>

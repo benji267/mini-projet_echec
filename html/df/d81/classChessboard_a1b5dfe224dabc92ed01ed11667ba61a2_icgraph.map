@@ -1,0 +1,7 @@
+<map id="Chessboard::put_piece" name="Chessboard::put_piece">
+<area shape="rect" id="node1" title="pose une pièce à la case spécifiée La pose est possile si la case est vide ou si elle contient une pi..." alt="" coords="504,31,673,57"/>
+<area shape="rect" id="node2" href="$d9/d68/classGame.html#a8db1fa47863a7a67ecb06327474d9612" title="gestion du déplacement suite à la saisie du coup" alt="" coords="341,31,456,57"/>
+<area shape="rect" id="node3" href="$dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="45,5,99,32"/>
+<area shape="rect" id="node4" href="$d9/d68/classGame.html#ac6bf6130a938fc687f418e77d5c9aa95" title="si un roque est demandé, il faut spécifier les cases de départ et d&#39;arrivée du roi et de la tour,..." alt="" coords="187,56,293,83"/>
+<area shape="rect" id="node5" href="$d9/d68/classGame.html#abcdda5e3d466a365c84fefaf27a30ece" title="change la valeur de roque_en_cours" alt="" coords="5,56,139,83"/>
+</map>

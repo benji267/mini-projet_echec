@@ -1,9 +1,0 @@
-digraph "Square"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{Square\n||+ Square()\l+ Square()\l+ getLigne()\l+ getColonne()\l+ to_string_afficher()\l+ square_to_string()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Cette classe a pour vocation de représenter l'état et la position d'une pièce."];
-  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" #colonne\n#ligne" ,arrowhead="odiamond",fontname="Helvetica"];
-  Node2 [label="{int\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-}
