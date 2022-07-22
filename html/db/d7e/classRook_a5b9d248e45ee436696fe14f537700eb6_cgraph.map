@@ -1,5 +1,0 @@
-<map id="Rook::is_moovement_legal" name="Rook::is_moovement_legal">
-<area shape="rect" id="node1" title="cette fonction permet de voir si le mouvement demandé par l&#39;utilisateur est légale et autorisé pour u..." alt="" coords="5,23,165,65"/>
-<area shape="rect" id="node2" href="$d3/d72/classSquare.html#ae75d936ad361d2ff001b289f1d914ab8" title="fonction qui renvoie la colonne où se trouve la pièce" alt="" coords="213,5,363,32"/>
-<area shape="rect" id="node3" href="$d3/d72/classSquare.html#a4fa5008593aaff1c8ffc038541e4586c" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="223,56,353,83"/>
-</map>

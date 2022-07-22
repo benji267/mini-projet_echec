@@ -1,7 +1,0 @@
-<map id="Chessboard::put_piece" name="Chessboard::put_piece">
-<area shape="rect" id="node1" title="pose une pièce à la case spécifiée La pose est possile si la case est vide ou si elle contient une pi..." alt="" coords="5,85,175,112"/>
-<area shape="rect" id="node2" href="$d5/df0/classPiece.html#a43c3f26ef40bed56c375fd3490c659d8" title="renvoie la couleur de la pièce" alt="" coords="237,5,364,32"/>
-<area shape="rect" id="node3" href="$d3/d72/classSquare.html#ae75d936ad361d2ff001b289f1d914ab8" title="fonction qui renvoie la colonne où se trouve la pièce" alt="" coords="427,88,576,115"/>
-<area shape="rect" id="node4" href="$d3/d72/classSquare.html#a4fa5008593aaff1c8ffc038541e4586c" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="436,143,567,169"/>
-<area shape="rect" id="node5" href="$df/d81/classChessboard.html#aedb59c02419b9dfc6527346fdf9d7acb" title="place un pointeur nul sur la case origine" alt="" coords="223,107,379,149"/>
-</map>

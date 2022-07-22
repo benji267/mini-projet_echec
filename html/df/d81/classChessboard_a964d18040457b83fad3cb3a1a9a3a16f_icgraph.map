@@ -1,5 +1,0 @@
-<map id="Chessboard::final_position" name="Chessboard::final_position">
-<area shape="rect" id="node1" title="la position finale du jeu sous une forme canonique, on récupère le contenu de chaque case en parcouta..." alt="" coords="300,5,493,32"/>
-<area shape="rect" id="node2" href="$d9/d68/classGame.html#a088203d7f976366b73c038e0db0ae55a" title="s&#39;occupe de l&#39;affichage final au format pgn" alt="" coords="108,5,252,32"/>
-<area shape="rect" id="node3" href="$dd/d66/echecs_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
-</map>

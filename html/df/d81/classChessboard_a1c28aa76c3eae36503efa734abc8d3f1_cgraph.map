@@ -1,6 +1,0 @@
-<map id="Chessboard::is_empty_bloc" name="Chessboard::is_empty_bloc">
-<area shape="rect" id="node1" title="indique le statut de la case (libre/occupée)." alt="" coords="5,31,205,57"/>
-<area shape="rect" id="node2" href="$df/d81/classChessboard.html#a919c8fa5906e0aaf902cd35a71c670e5" title="vérifie que l&#39;on reste dans les dimensions de l&#39;échiquier" alt="" coords="253,31,423,57"/>
-<area shape="rect" id="node3" href="$d3/d72/classSquare.html#ae75d936ad361d2ff001b289f1d914ab8" title="fonction qui renvoie la colonne où se trouve la pièce" alt="" coords="471,5,620,32"/>
-<area shape="rect" id="node4" href="$d3/d72/classSquare.html#a4fa5008593aaff1c8ffc038541e4586c" title="fonction qui renvoie la ligne où se trouve la pièce" alt="" coords="480,56,611,83"/>
-</map>
